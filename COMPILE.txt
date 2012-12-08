@@ -1,0 +1,15 @@
+nicoWnnG Windows環境でのコンパイル方法
+
+
+1. 以下を導入する。
+   ・eclipse helios以降
+   ・Android SDK r08
+   ・Android NDK r5
+
+2. ./jniフォルダへ移動し、NDKコンソールから"ndk-build"コマンドで
+   JNI部分のコンパイルを行う。
+
+3. eclipseを起動し、Java部分のコンパイルおよびapk生成を行う。
+
+
+[EOF]

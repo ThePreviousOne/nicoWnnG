@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Last-modified" content="<!--#echo var='LAST_MODIFIED'-->">
+<LINK REV=MADE HREF="mailto:gorry@hauN.org">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Language" CONTENT="ja">
+<LINK REL="stylesheet" TYPE="text/css" HREF="basic.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="local.css">
+<TITLE>ユーザー辞書 - nicoWnnG IME</TITLE>
+</HEAD>
+<BODY BGCOLOR="#D0E0F0" TEXT="#000080" LINK="#008000" VLINK="#FF8080" ALINK="#FF40C0">
+<DIV ALIGN="center" class="titleframe">
+<DIV ALIGN="center" class="title">
+<BIG class="big_title"><B>ユーザー辞書 - nicoWnnG IME</B></BIG><BR>
+</DIV>
+</DIV>
+
+<DIV class="shortcut">
+<A HREF="index.html">[ヘルプトップ]</A>
+<A HREF="http://GORRY.hauN.org/android/gamdx/">[nicoWnnG IME配布ページ]</A>
+</DIV>
+
+<HR>
+<!-------------------------------------------------------------------------------------------->
+
+<DIV class="pagebody">
+
+<DIV class="rightpicture"><IMG src="pic/userdic_main.png"><BR>[ユーザー辞書]画面</DIV>
+
+<P><SPAN class="ctrl">[環境設定]画面</SPAN>から<SPAN class="ctrl">[ユーザー辞書]</SPAN>を選ぶと、使用者が独自に「読みと表記」を登録できる「ユーザー辞書」の編集を行うことができます。</P>
+
+<UL class="jump">
+<LI><A HREF="system.html#config_004">環境設定</A>
+</UL>
+
+<P>ユーザー辞書は、日本語と英語それぞれで10000語を登録することができます。</P>
+
+<TABLE><TR><TD>
+<DIV class="fyi">
+<DIV>2011.1205.1以前のバージョンでユーザー辞書に登録した単語は、「予測変換でしか変換候補に表示されない」不具合があります。この不具合を改善するには、以下のようにしてください。</DIV>
+<OL>
+<LI>以下の項で解説する<SPAN class="ctrl">[辞書保存]</SPAN>を実行して、ユーザー辞書のバックアップをとります。
+<LI>保存後すぐに<SPAN class="ctrl">[辞書復元]</SPAN>を実行して、ユーザー辞書をバックアップから復元します。
+</OL>
+</DIV>
+</TD></TR></TABLE>
+
+<TABLE><TR><TD>
+<DIV class="fyi">
+<DIV>この項で使用している画像には、「IME用将棋用語辞書」が使用されています。</DIV>
+<DIV>nicoWnnG IMEでは、同様の「MS-IME用テキスト形式ユーザー辞書ファイル」をインポートすることができます。</DIV>
+<BLOCKQUOTE>
+<DIV>IME用将棋用語辞書</DIV>
+<DIV>Copyright (c) 2001-2010 Akinori MUSHA</DIV>
+<UL class="jump">
+<LI><A HREF="http://idaemons.org/projects/shogidic/">http://idaemons.org/projects/shogidic/</A>
+</UL>
+</BLOCKQUOTE>
+</DIV>
+</TD></TR></TABLE>
+
+
+
+
+<H2 id="userdic_list">ユーザー辞書の編集</H2>
+
+<P><SPAN class="ctrl">[ユーザー辞書]画面</SPAN>を開くと、ユーザー辞書に登録されている単語リストと、それらに編集などを行うためのメニューボタンが表示されます。</P>
+<P>メニューボタンは、横一列に並んでいます。全てのボタンが表示されていないときは、ボタン列を横へスワイプしてください。</P>
+
+<DL class="item">
+
+<DT id="userdic_list_buttons_page">ページの移動</DT>
+<DD>
+<DIV class="rightpicture"><IMG src="pic/userdic_button_page.png"><BR>[ページ移動]ボタン</DIV>
+<DIV>単語リストには、最大100単語が表示されます。100以上の単語を登録しているときは、<SPAN class="ctrl">[ページ移動]ボタン</SPAN>をタップすることで、ページを切り替えることができます。</DIV>
+</DD>
+<BR clear="all">
+
+
+<DT id="userdic_list_buttons_edit">単語の削除・編集・追加</DT>
+<DD>
+<DIV class="rightpicture"><IMG src="pic/userdic_button_edit.png"><BR>[単語編集]ボタン</DIV>
+<DIV>リストから単語を選び、<SPAN class="ctrl">[単語編集]ボタン</SPAN>をタップすることで、選択した単語を削除・編集・追加することができます。</DIV>
+<TABLE border="1">
+<TR>
+<TH id="userdic_list_button_delete">削除</TH>
+<TD>選択した単語を削除します。</TD>
+</TR>
+<TR>
+<TH id="userdic_list_button_edit">編集</TH>
+<TD>選択した単語の読みと表記を変更します。</TD>
+</TR>
+<TR>
+<TH id="userdic_list_button_add">追加</TH>
+<TD>
+<DIV>新しい単語を登録します。</DIV>
+<UL class="jump">
+<LI><A HREF="#userdic_edit">単語編集</A>
+</UL>
+</TD>
+</TR>
+</TABLE>
+</DD>
+
+
+<DT id="userdic_list_buttons_import">辞書の管理</DT>
+<DD>
+<DIV class="rightpicture"><IMG src="pic/userdic_button_import.png"><BR>[辞書管理]ボタン</DIV>
+<DIV><SPAN class="ctrl">[辞書管理]ボタン</SPAN>をタップすることで、ユーザー辞書のバックアップや、テキスト辞書ファイルからの読み込み（インポート）をすることができます。</DIV>
+<TABLE border="1">
+<TR>
+<TH id="userdic_list_button_backup">辞書保存</TH>
+<TD>
+<DIV>ユーザー辞書をSDカードなどに保存（バックアップ）します。</DIV>
+<DIV>保存先は、「/sdcard/nicoWnnG/」フォルダになります。</DIV>
+</TD>
+</TR>
+<TR>
+<TH id="userdic_list_button_restore">辞書復元</TH>
+<TD>
+<DIV><SPAN class="ctrl">[辞書保存]</SPAN>で保存（バックアップ）したユーザー辞書を復元します。</DIV>
+<DIV>読み込み先は、「/sdcard/nicoWnnG/」フォルダになります。</DIV>
+<DIV>すでに単語が登録されている状態で復元を行うと、マージ（追加しながら復元）となります。完全な元の形に復元したいときは、まず<SPAN class="ctrl">[辞書初期化]</SPAN>を行ってください。</DIV>
+<UL class="jump">
+<LI><A HREF="#userdic_list_button_init">辞書初期化</A>
+</UL>
+</TD>
+</TR>
+<TR>
+<TH id="userdic_list_button_import">辞書読込</TH>
+<TD>
+<DIV>テキスト辞書ファイルから単語を読み込んで、追加（インポート）します。</DIV>
+<DIV>テキスト辞書ファイルの形式については、以下をご覧ください。</DIV>
+<UL class="jump">
+<LI><A HREF="#userdic_format">テキスト辞書ファイルの形式</A>
+</UL>
+</TD>
+</TR>
+</TABLE>
+</DD>
+
+
+<DT id="userdic_list_buttons_etc">その他</DT>
+<DD>
+<DIV class="rightpicture"><IMG src="pic/userdic_button_etc.png"><BR>[その他]ボタン</DIV>
+<DIV>その他のボタンです。</DIV>
+<TABLE border="1">
+<TR>
+<TH id="userdic_list_button_init">辞書初期化</TH>
+<TD>
+<DIV>ユーザー辞書をすべて消去します。</DIV>
+</TD>
+</TR>
+<TR>
+<TH id="userdic_list_button_quit">編集終了</TH>
+<TD>
+<DIV>ユーザー辞書の編集を終了します。<SPAN class="ctrl">[Back]ボタン</SPAN>でも終了することができます。</DIV>
+</TD>
+</TR>
+</TABLE>
+</DD>
+
+</DL>
+
+
+
+
+<H2 id="userdic_edit">単語の編集</H2>
+
+<DIV class="rightpicture"><IMG src="pic/userdic_edit.png"><BR>[単語編集]画面</DIV>
+
+<P>単語リストから単語を選び、<SPAN class="ctrl">[単語編集]ボタン</SPAN>をタップすることで、選択した単語を追加（または編集）することができます。</P>
+
+<UL class="jump">
+<LI><A HREF="#userdic_list">ユーザー辞書の編集</A>
+</UL>
+
+<P>単語の<SPAN class="ctrl">[読み]</SPAN>と<SPAN class="ctrl">[表記]</SPAN>を入力して<SPAN class="ctrl">[追加]</SPAN>をタップすることで、単語を追加（または編集）します。</P>
+
+
+
+
+<H2 id="userdic_format">テキスト辞書ファイルの形式</H2>
+
+<P>nicoWnnG IMEで読み込み（インポート）が可能なテキスト辞書ファイルは、以下の形式を満たす必要があります。</P>
+
+<OL>
+
+<LI>シフトJIS形式、改行コード[LF]または[CRLF]で、拡張子".TXT"のファイル。
+<LI>各行は、先頭に「読み」があり、１文字の[TAB]のあとに「表記」がある。「表記」は改行または[TAB]で終了し、以後改行まで無視される。
+<LI>先頭文字が"!"の行は、コメントとして無視される。
+<LI>2.・3.どちらにも当てはまらない行は、無視される。
+
+</OL>
+
+<P>マイクロソフト社の「MS-IME」でエクスポートしたユーザー辞書はこの形式に適合しており、nicoWnnG IMEで読み込むことができます。</P>
+
+
+
+
+<HR>
+<!-------------------------------------------------------------------------------------------->
+
+<DIV class="shortcut">
+<A HREF="index.html">[ヘルプトップ]</A>
+<A HREF="http://GORRY.hauN.org/android/gamdx/">[nicoWnnG IME配布ページ]</A>
+</DIV>
+
+</BODY>
+</HTML>

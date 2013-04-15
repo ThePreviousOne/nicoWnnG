@@ -48,7 +48,6 @@
        android:layout_height="fill_parent"
        android:layout_width="wrap_content" 
        android:text="@string/button_candidate_delete"
-       android:visibility="gone"
        />
     <net.gorry.android.input.nicownng.CandidateViewButton
        android:id="@+id/candidate_cancel"

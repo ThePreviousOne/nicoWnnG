@@ -112,6 +112,8 @@
     <item>@string/preference_flick_sensitivity_5</item>
     <item>@string/preference_flick_sensitivity_6</item>
     <item>@string/preference_flick_sensitivity_7</item>
+    <item>@string/preference_flick_sensitivity_8</item>
+    <item>@string/preference_flick_sensitivity_9</item>
   </string-array>
   <string-array name="flick_sensitivity_values">
     <item>0</item>
@@ -122,6 +124,8 @@
     <item>5</item>
     <item>6</item>
     <item>7</item>
+    <item>8</item>
+    <item>9</item>
   </string-array>
 
   <string-array name="key_height_entries">
@@ -133,6 +137,8 @@
     <item>@string/preference_key_height_5</item>
     <item>@string/preference_key_height_6</item>
     <item>@string/preference_key_height_7</item>
+    <item>@string/preference_key_height_8</item>
+    <item>@string/preference_key_height_9</item>
   </string-array>
   <string-array name="key_height_values">
     <item>0</item>
@@ -143,6 +149,8 @@
     <item>5</item>
     <item>6</item>
     <item>7</item>
+    <item>8</item>
+    <item>9</item>
   </string-array>
 
   <string-array name="candidateview_height_entries">
@@ -154,6 +162,8 @@
     <item>@string/preference_candidateview_height_5</item>
     <item>@string/preference_candidateview_height_6</item>
     <item>@string/preference_candidateview_height_7</item>
+    <item>@string/preference_candidateview_height_8</item>
+    <item>@string/preference_candidateview_height_9</item>
   </string-array>
   <string-array name="candidateview_height_values">
     <item>0</item>
@@ -164,6 +174,8 @@
     <item>5</item>
     <item>6</item>
     <item>7</item>
+    <item>8</item>
+    <item>9</item>
   </string-array>
 
   <string-array name="qwerty_kana_mode_entries">
@@ -198,6 +210,8 @@
     <item>@string/preference_candidate_font_size_5</item>
     <item>@string/preference_candidate_font_size_6</item>
     <item>@string/preference_candidate_font_size_7</item>
+    <item>@string/preference_candidate_font_size_8</item>
+    <item>@string/preference_candidate_font_size_9</item>
   </string-array>
   <string-array name="candidate_font_size_values">
     <item>0</item>
@@ -208,6 +222,8 @@
     <item>5</item>
     <item>6</item>
     <item>7</item>
+    <item>8</item>
+    <item>9</item>
   </string-array>
 
 
@@ -255,10 +271,12 @@
   <string-array name="convert_keymap_type_entries">
     <item>@string/preference_convert_keymap_type_0</item>
     <item>@string/preference_convert_keymap_type_1</item>
+    <item>@string/preference_convert_keymap_type_2</item>
   </string-array>
   <string-array name="convert_keymap_type_values">
     <item>0</item>
     <item>1</item>
+    <item>2</item>
   </string-array>
 
 

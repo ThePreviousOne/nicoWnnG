@@ -1745,7 +1745,7 @@ public class DefaultSoftKeyboardNico extends DefaultSoftKeyboardJAJP {
 			case KEYMODE_JA_HALF_NICO_KATAKANA:
 			case KEYMODE_JA_HALF_ALPHABET:
 			case KEYMODE_JA_FULL_ALPHABET:
-				code = mSetupKeyboard.GetFlickKeyCode(prev, key);
+				code = mSetupKeyboard.GetFlickChangeMap(prev, key);
 		}
 		return code;
 	}

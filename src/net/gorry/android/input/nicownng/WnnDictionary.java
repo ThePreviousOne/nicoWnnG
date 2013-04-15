@@ -357,5 +357,13 @@ public interface WnnDictionary {
      * @return                  0 if no error occur; <0 if an error occur
      */
     public int learnWord( WnnWord word, WnnWord previousWord );
+
+    /**
+     * Forget the word.
+     *
+     * @param word      The word for forget
+     * @return          0 if no error occur; <0 if an error occur
+     */
+    public int forgetWord( WnnWord word );
 }
 

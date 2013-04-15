@@ -185,7 +185,7 @@ abstract class SetupKeyboard {
 	abstract HashMap<String, String> SetupReplaceTable(boolean du);
 	abstract int SetupIcon();
 	abstract int SetupModeKeyString();
-	abstract int GetFlickKeyCode(int line, int row);
+	abstract int GetFlickChangeMap(int line, int row);
 
 
 

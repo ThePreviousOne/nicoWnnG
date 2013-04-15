@@ -86,9 +86,9 @@ public class TextCandidatesViewManager implements CandidatesViewManager, Gesture
 	 * candidate-line height
 	 */
 	private static int mCandidateViewHeightIndex = 0;
-	public static int candidateViewDataTable[] = { 24, 33, 42, 51, 60, 69, 78, 87 };
+	public static int candidateViewDataTable[] = { 24, 33, 42, 51, 60, 69, 78, 87, 105, 123, };
 	private static int mCandidateTextSizeIndex = 2;
-	public static int candidateTextSizeTable[] = { 12, 16, 20, 24, 28, 32, 36, 40 };
+	public static int candidateTextSizeTable[] = { 12, 16, 20, 24, 28, 32, 36, 40, 48, 56, };
 
 	/** Maximum number of displaying candidates par one line (full view mode) */
 	private static int mFullViewDiv = FULL_VIEW_DIV;
@@ -127,13 +127,6 @@ public class TextCandidatesViewManager implements CandidatesViewManager, Gesture
 	private boolean mAutoHideMode;
 	/** The converter to be get candidates from and notice the selected candidate to. */
 	public WnnEngine mConverter;
-	/** Vibrator for touch vibration */
-	private Vibrator mVibrator = null;
-	/** key click sound */
-	protected SoundPool mSoundPool = null;
-	protected int mSound = 0;
-	protected int mSoundStreamId = 0;
-	protected float mSoundVolume = 0.0F;
 
 	/** Number of candidates displaying */
 	int mWordCount;
@@ -508,6 +501,16 @@ public class TextCandidatesViewManager implements CandidatesViewManager, Gesture
 			}
 		});
 
+		/* delete button */
+		b = (Button)scaleUp.findViewById(R.id.candidate_delete);
+		b.setOnClickListener(new View.OnClickListener() {
+			public void onClick(final View v) {
+				deleteCandidate(mWord);
+				setViewLayout(CandidatesViewManager.VIEW_TYPE_NORMAL);
+				mWnn.onEvent(new NicoWnnGEvent(NicoWnnGEvent.UPDATE_CANDIDATE));
+			}
+		});
+
 		/* cancel button */
 		b = (Button)scaleUp.findViewById(R.id.candidate_cancel);
 		b.setOnClickListener(new View.OnClickListener() {
@@ -540,16 +543,12 @@ public class TextCandidatesViewManager implements CandidatesViewManager, Gesture
 					mIsScroll = false;
 					return;
 				}
-				if (mVibrator != null) {
-					try { mVibrator.vibrate(30); } catch (final Exception ex) { }
-				}
+				DefaultSoftKeyboard.doClickFeedback(1);
 				mIsFullView = false;
 				mIsScroll   = false; // reset scroll flag
 				mWnn.onEvent(new NicoWnnGEvent(NicoWnnGEvent.LIST_CANDIDATES_NORMAL));
 			} else {
-				if (mVibrator != null) {
-					try { mVibrator.vibrate(30); } catch (final Exception ex) { }
-				}
+				DefaultSoftKeyboard.doClickFeedback(1);
 				mIsFullView = true;
 				mIsScroll   = false; // reset scroll flag
 				mWnn.onEvent(new NicoWnnGEvent(NicoWnnGEvent.LIST_CANDIDATES_FULL));
@@ -1727,63 +1726,7 @@ public class TextCandidatesViewManager implements CandidatesViewManager, Gesture
 	}
 	/** @see CandidatesViewManager#setPreferences */
 	public void setPreferences(final SharedPreferences pref) {
-
-		/* vibrator */
-		try {
-			if (pref.getBoolean("key_vibration", false)) {
-				mVibrator = (Vibrator)mWnn.getSystemService(Context.VIBRATOR_SERVICE);
-			} else {
-				mVibrator = null;
-			}
-		} catch (final Exception ex) {
-			Log.d("NicoWnnG", "NO VIBRATOR");
-		}
-
-		/* sound */
-		try {
-			if (mSoundPool != null) {
-				mSoundPool.release();
-				mSoundPool = null;
-				mSound = 0;
-			}
-			if (pref.getBoolean("key_sound", false)) {
-				mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
-				try {
-					String path = Environment.getExternalStorageDirectory().toString();
-					path += "/nicoWnnG/type.wav";
-					mSound = mSoundPool.load(path, 1);
-				} catch (final Exception e) {
-					//
-				}
-				if (mSound == 0) {
-					try {
-						String path = Environment.getExternalStorageDirectory().toString();
-						path += "/nicoWnnG/type.ogg";
-						mSound = mSoundPool.load(path, 1);
-					} catch (final Exception e) {
-						//
-					}
-				}
-				if (mSound == 0) {
-					mSound = mSoundPool.load(mWnn, R.raw.type, 1);
-				}
-				final int vol = Integer.valueOf(pref.getString("key_sound_vol", "0"));
-				switch (vol) {
-					default:
-					case 0:
-						mSoundVolume = 1.0F;
-						break;
-					case 1:
-						mSoundVolume = 0.5F;
-						break;
-					case 2:
-						mSoundVolume = 0.25F;
-						break;
-				}
-			}
-		} catch (final Exception ex) {
-			Log.d("NicoWnnG", "NO SOUND");
-		}
+		//
 	}
 
 	/**
@@ -1804,23 +1747,17 @@ public class TextCandidatesViewManager implements CandidatesViewManager, Gesture
 	 */
 	private void selectCandidate(final WnnWord word) {
 		setViewLayout(CandidatesViewManager.VIEW_TYPE_NORMAL);
-		if (mSoundPool != null) {
-			try {
-				if (mSoundStreamId != 0) {
-					mSoundPool.stop(mSoundStreamId);
-					mSoundStreamId = 0;
-				}
-				mSoundStreamId = mSoundPool.play(mSound, mSoundVolume, mSoundVolume, 0, 0, 1);
-			}
-			catch (final Exception ex) {
-				//
-			}
-		}
-		if (mVibrator != null) {
-			try { mVibrator.vibrate(30); } catch (final Exception ex) { }
-		}
+		DefaultSoftKeyboard.doClickFeedback(1);
 		mIsLockHScroll = true;
 		mWnn.onEvent(new NicoWnnGEvent(NicoWnnGEvent.SELECT_CANDIDATE, word));
+		mIsLockHScroll = false;
+	}
+
+	private void deleteCandidate(final WnnWord word) {
+		setViewLayout(CandidatesViewManager.VIEW_TYPE_NORMAL);
+		DefaultSoftKeyboard.doClickFeedback(1);
+		mIsLockHScroll = true;
+		mWnn.onEvent(new NicoWnnGEvent(NicoWnnGEvent.FORGET_CANDIDATE, word));
 		mIsLockHScroll = false;
 	}
 
@@ -1830,45 +1767,52 @@ public class TextCandidatesViewManager implements CandidatesViewManager, Gesture
 	}
 
 	/** @see android.view.GestureDetector.OnGestureListener#onFling */
-	public boolean onFling(final MotionEvent arg0, final MotionEvent arg1, final float arg2, final float arg3) {
+	public boolean onFling(final MotionEvent e1, final MotionEvent e2, final float veloX, final float veloY) {
 		if (mIsScaleUp) {
 			return false;
 		}
 		boolean consumed = false;
 
 		int gety = 0;
-		if ((arg0 != null) && (arg1 != null)) {
-			gety = (int)(arg1.getY() - arg0.getY());
+		if ((e1 != null) && (e2 != null)) {
+			gety = (int)(e2.getRawY() - e1.getRawY());
 		}
-		else{
-			gety = (int)arg3;
+		int getx = 0;
+		if ((e1 != null) && (e2 != null)) {
+			getx = (int)(e2.getRawX() - e1.getRawX());
 		}
 
+		int w = (int)(getCandidateMinimumHeight()*1);
 		//if (arg3 < (float)-(getCandidateMinimumHeight() * 10)) {
-		if (gety < -(getCandidateMinimumHeight() * 2)) {
-			if ((mViewType == CandidatesViewManager.VIEW_TYPE_NORMAL) && mCanReadMore) {
-				if (mVibrator != null) {
-					try { mVibrator.vibrate(30); } catch (final Exception ex) { }
+		if (!mIsFullView) {
+			if ((-w < getx) && (getx < w)) {
+				if (gety < -w) {
+					if ((mViewType == CandidatesViewManager.VIEW_TYPE_NORMAL) && mCanReadMore) {
+						DefaultSoftKeyboard.doClickFeedback(2);
+						mIsFullView = true;
+						mIsScroll   = false; // reset scroll flag
+						mWnn.onEvent(new NicoWnnGEvent(NicoWnnGEvent.LIST_CANDIDATES_FULL));
+						consumed = true;
+					}
 				}
-				mIsFullView = true;
-				mIsScroll   = false; // reset scroll flag
-				mWnn.onEvent(new NicoWnnGEvent(NicoWnnGEvent.LIST_CANDIDATES_FULL));
-				consumed = true;
 			}
 		}
 		//else if (arg3 > (float)getCandidateMinimumHeight()) {
-		else if (gety > (getCandidateMinimumHeight() * 1)) {
-			if ((mViewBodyVScroll2nd.getScrollY() == 0) && (true == mIsFullView)) {
+		else {
+			if ((-w < gety) && (gety < w)) {
+				if ((getx < -w) || (w < getx)) {
+					// if ((mViewBodyVScroll2nd.getScrollY() == 0) && (true == mIsFullView)) {
+					/*
 				if (true == mIsScroll) {
 					mIsScroll = false;
 					return false;
 				}
-				if (mVibrator != null) {
-					try { mVibrator.vibrate(30); } catch (final Exception ex) { }
+					 */
+					DefaultSoftKeyboard.doClickFeedback(2);
+					mIsFullView = false;
+					mWnn.onEvent(new NicoWnnGEvent(NicoWnnGEvent.LIST_CANDIDATES_NORMAL));
+					consumed = true;
 				}
-				mIsFullView = false;
-				mWnn.onEvent(new NicoWnnGEvent(NicoWnnGEvent.LIST_CANDIDATES_NORMAL));
-				consumed = true;
 			}
 		}
 		return consumed;
@@ -1973,4 +1917,7 @@ public class TextCandidatesViewManager implements CandidatesViewManager, Gesture
 		return DOCOMO_EMOJI_TABLE.get(word.candidate);
 	}
 
+	public int getCandidateTextSize() {
+		return candidateTextSizeTable[mCandidateTextSizeIndex];
+	}
 }

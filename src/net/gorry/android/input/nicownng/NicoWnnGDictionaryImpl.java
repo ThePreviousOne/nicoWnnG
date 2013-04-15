@@ -1119,4 +1119,42 @@ public class NicoWnnGDictionaryImpl implements WnnDictionary {
         /* If no writable dictionary exists, no error occurs. */
         return 0;
     }
+
+    /**
+     * Forget the word with connection.
+     * 
+     * @param word              The word to forget
+     * @return                  0 if success; minus value if fail.
+     */
+    public int forgetWord( WnnWord word ) {
+        if( mDbDic != null ) {
+
+            if( word.stroke.length()    > 0 && word.stroke.length()    <= MAX_STROKE_LENGTH &&
+            		word.candidate.length() > 0 && word.candidate.length() <= MAX_CANDIDATE_LENGTH ) {
+            	StringBuilder strokeSQL    = new StringBuilder();
+            	StringBuilder candidateSQL = new StringBuilder();
+            	DatabaseUtils.appendEscapedSQLString( strokeSQL, word.stroke );
+            	DatabaseUtils.appendEscapedSQLString( candidateSQL, word.candidate );
+
+            	mDbDic.beginTransaction();
+            	try {
+            		mDbDic.delete( TABLE_NAME_DIC,
+            				String.format( "%s=%d and %s=%s and %s=%s",
+            						COLUMN_NAME_TYPE, TYPE_NAME_LEARN,
+            						COLUMN_NAME_STROKE, strokeSQL,
+            						COLUMN_NAME_CANDIDATE, candidateSQL ),
+            						null );
+
+            		mDbDic.setTransactionSuccessful();
+            	} catch( SQLException e ) {
+            		return -1;
+            	} finally {
+            		mDbDic.endTransaction();
+            	}
+            }
+        }
+
+        /* If no writable dictionary exists, no error occurs. */
+        return 0;
+    }
 }

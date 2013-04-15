@@ -17,8 +17,8 @@
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	package="net.gorry.android.input.nicownng"
-	android:versionName="2012.1125.1.1305"
-	android:versionCode="201211251"
+	android:versionName="2013.0415.1.1305"
+	android:versionCode="201304151"
 	>
 	<uses-permission
 		android:name="android.permission.VIBRATE"

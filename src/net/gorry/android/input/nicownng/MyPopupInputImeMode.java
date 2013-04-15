@@ -13,11 +13,14 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.provider.Settings;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.DynamicDrawableSpan;
 import android.text.style.ImageSpan;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -77,9 +80,11 @@ public class MyPopupInputImeMode {
 		me = context;
 		mButtonWidth = btnw;
 		mButtonHeight = btnh;
-		if (mButtonWidth > 100) {
-			// ボタン横幅が大きすぎるとレイアウトミスする環境があるので制限
-			mButtonWidth = 100;
+		if (Build.VERSION.SDK_INT < 13) {
+			if (mButtonWidth > 100) {
+				// ボタン横幅が大きすぎるとレイアウトミスする環境があるので制限
+				mButtonWidth = 100;
+			}
 		}
 		mButtonNumX = w;
 		mButtonNumY = h;
@@ -90,6 +95,8 @@ public class MyPopupInputImeMode {
 		mButtonLayout.setOrientation(LinearLayout.VERTICAL);
 		mButtonLayout.setLayoutParams(new LinearLayout.LayoutParams(WC, WC));
 		
+		final int textsize = NicoWnnGJAJP.getInstance().candidatesViewTextSize();
+
 		for (int y=0; y<h; y++) {
 			mButtonLayoutH[y] = new LinearLayout(me);
 			mButtonLayoutH[y].setOrientation(LinearLayout.HORIZONTAL);
@@ -131,6 +138,7 @@ public class MyPopupInputImeMode {
 				mButton[i].setLayoutParams(new LinearLayout.LayoutParams(WC, WC));
 				mButton[i].setWidth(mButtonWidth);
 				mButton[i].setHeight(mButtonHeight);
+				mButton[i].setTextSize(textsize);
 				mButton[i].setOnClickListener(mMyButtonClickListener);
 				mButton[i].setOnLongClickListener(mMyButtonLongClickListener);
 				mButton[i].setVisibility(View.GONE);

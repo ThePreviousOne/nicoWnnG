@@ -67,7 +67,7 @@ public class SetupKeyboardNico extends SetupKeyboard {
 	/*********************************
 	 *
 	 */
-	public int GetFlickKeyCode(final int line, final int row) {
+	public int GetFlickChangeMap(final int line, final int row) {
 		return flickChangeMap[line][row];
 	}
 
@@ -332,8 +332,8 @@ public class SetupKeyboardNico extends SetupKeyboard {
 		{  0,  2, -1,  1, -1 }, // Ya
 		{  0,  4,  1,  2,  3 }, // Ra
 		{  0, -1,  1,  2,  5 }, // Wa
-		{  0,  0,  0,  0,  0 }, // Sharp
-		{  0, -1,  1,  2,  3 }, // Aster
+		{ -1, -1, -1, -1, -1 }, // Sharp
+		{ -1, -1,  1,  2,  3 }, // Aster
 	};
 
 	private static final int selectLandKeyTable[] = {

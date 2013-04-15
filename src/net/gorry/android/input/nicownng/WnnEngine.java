@@ -131,6 +131,18 @@ public interface WnnEngine {
     public boolean learn(WnnWord word);
 
     /**
+     * Forget a word. 
+     * <br>
+     * This method is used to register the word selected from
+     * candidates to the forget dictionary or update the frequency
+     * of the word.
+     *
+     * @param word      The selected word
+     * @return          {@code true} if success; {@code false} if fail or not supported.
+     */
+    public boolean forget(WnnWord word);
+
+    /**
      * Register a word to the user's dictionary.
      * <br>
      * @param word      A word to register

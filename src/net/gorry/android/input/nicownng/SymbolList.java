@@ -574,6 +574,9 @@ public class SymbolList implements WnnEngine {
 	/** @see net.gorry.android.input.nicownng.WnnEngine#learn */
 	public boolean learn(final WnnWord word) {return false;}
 
+	/** @see net.gorry.android.input.nicownng.WnnEngine#forget */
+	public boolean forget(final WnnWord word) {return false;}
+
 	/** @see net.gorry.android.input.nicownng.WnnEngine#addWord */
 	public int addWord(final WnnWord word) {return 0;}
 

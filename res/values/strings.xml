@@ -277,8 +277,8 @@
   <string name="preference_convert_keymap_type_title">Convert Key Map</string>
   <string name="preference_convert_keymap_type_summary">Select Hardware Keyboard Mapping Conversion.</string>
   <string name="preference_convert_keymap_type_0">Not Convert</string>
-  <string name="preference_convert_keymap_type_1">JIS Keyboard -> US Device</string>
-  <string name="preference_convert_keymap_type_2">US Keyboard -> JIS Device</string>
+  <string name="preference_convert_keymap_type_1">JIS Keyboard</string>
+  <string name="preference_convert_keymap_type_2">US Keyboard</string>
 
   <string name="preference_cutpasteaction_byime_title">[Ctrl/Alt]+AXCV Soft-key always Cut&amp;Paste Action</string>
   <string name="preference_cutpasteaction_byime_summary">Enables Cut&amp;Paste Action by Software Keyboard, even if there was no support in the OS/Apps</string>
@@ -347,6 +347,8 @@
   <string name="preference_flick_sensitivity_5">Longest+1</string>
   <string name="preference_flick_sensitivity_6">Longest+2</string>
   <string name="preference_flick_sensitivity_7">Longest+3</string>
+  <string name="preference_flick_sensitivity_8">Longest+4</string>
+  <string name="preference_flick_sensitivity_9">Longest+5</string>
 
   <string name="preference_key_height_title">Key Height</string>
   <string name="preference_key_height_summary">Key Height</string>
@@ -358,6 +360,8 @@
   <string name="preference_key_height_5">Biggest+1</string>
   <string name="preference_key_height_6">Biggest+2</string>
   <string name="preference_key_height_7">Biggest+3</string>
+  <string name="preference_key_height_8">Biggest+4</string>
+  <string name="preference_key_height_9">Biggest+5</string>
 
   <string name="preference_candidateview_height_title">Candidate Height</string>
   <string name="preference_candidateview_height_summary">Candidate Height</string>
@@ -369,6 +373,8 @@
   <string name="preference_candidateview_height_5">Biggest+1</string>
   <string name="preference_candidateview_height_6">Biggest+2</string>
   <string name="preference_candidateview_height_7">Biggest+3</string>
+  <string name="preference_candidateview_height_8">Biggest+4</string>
+  <string name="preference_candidateview_height_9">Biggest+5</string>
 
   <string name="preference_candidate_font_size_title">Candidate Font Size</string>
   <string name="preference_candidate_font_size_summary">Candidate Font Size</string>
@@ -380,6 +386,8 @@
   <string name="preference_candidate_font_size_5">Biggest+1</string>
   <string name="preference_candidate_font_size_6">Biggest+2</string>
   <string name="preference_candidate_font_size_7">Biggest+3</string>
+  <string name="preference_candidate_font_size_8">Biggest+4</string>
+  <string name="preference_candidate_font_size_9">Biggest+5</string>
 
   <string name="preference_qwerty_kana_mode_title">QWERTY Key Type</string>
   <string name="preference_qwerty_kana_mode_summary">Input ASCII/Kana in QWERTY</string>
@@ -420,14 +428,14 @@
 
    <!-- IME dependency -->
   <!-- OpenWnn English -->
-  <string name="nicownng_english_copyright">Ver.1.3.1\nOMRON SOFTWARE Co., Ltd.\nNicoWnn Ver.1.3.0\nNicoWnnG Ver.2012.1125.1</string>
+  <string name="nicownng_english_copyright">Ver.1.3.1\nOMRON SOFTWARE Co., Ltd.\nNicoWnn Ver.1.3.0\nNicoWnnG Ver.2013.0415.1</string>
   <string name="nicownng_english">nicoWnnG English</string>
   <string name="nicownng_english_system_dictionary">/data/data/net.gorry.android.input.nicownng/lib/libWnnEngDic.so</string>
   <string name="nicownng_english_writable_dictionary">/data/data/net.gorry.android.input.nicownng/writableEN.dic</string>
   <string name="en_word_separators">.,;:!?</string>
 
   <!-- OpenWnn Japanese -->
-  <string name="nicownng_japanese_copyright">Ver.1.3.1\nOMRON SOFTWARE Co., Ltd.\nNicoWnn Ver.1.3.0\nNicoWnnG Ver.2012.1125.1</string>
+  <string name="nicownng_japanese_copyright">Ver.1.3.1\nOMRON SOFTWARE Co., Ltd.\nNicoWnn Ver.1.3.0\nNicoWnnG Ver.2013.0415.1</string>
   <string name="nicownng_japanese">nicoWnnG IME</string>
   <string name="openwnn_japanese_system_dictionary">/data/data/net.gorry.android.input.nicownng/lib/libWnnJpnDic.so</string>
   <string name="nicownng_japanese_writable_dictionary">/data/data/net.gorry.android.input.nicownng/writableJAJP.dic</string>

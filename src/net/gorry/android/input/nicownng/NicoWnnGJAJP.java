@@ -1702,6 +1702,11 @@ public class NicoWnnGJAJP extends NicoWnnG {
 					processRightKeyEvent();
 				}
 				return true;
+				
+			case NicoWnnGEvent.FORGET_CANDIDATE:
+				forgetWord(ev.word);
+				return true;
+
 		}
 
 		return ret;
@@ -1825,7 +1830,7 @@ public class NicoWnnGJAJP extends NicoWnnG {
 		0x0000, // 41 : ENVELOPE
 		0x0000, // 42 : ENTER
 		0x0000, // 43 : DEL
-		0x0000, // 44 : GRAVE
+		0x308d, // 44 : GRAVE
 		0x307b, // 45 : MINUS
 		0x3078, // 46 : EQUALS
 		0x309b, // 47 : LEFT_BRACKET
@@ -1940,11 +1945,11 @@ public class NicoWnnGJAJP extends NicoWnnG {
 		0x0000, // 42 : ENTER
 		0x0000, // 43 : DEL
 		0x0000, // 44 : GRAVE
-		0x307b, // 45 : MINUS
+		0x30fc, // 45 : MINUS
 		0x3078, // 46 : EQUALS
-		0x309b, // 47 : LEFT_BRACKET
-		0x300c, // 48 : RIGHT_BRACKET
-		0x300d, // 49 : BACKSLASH
+		0x300c, // 47 : LEFT_BRACKET
+		0x300d, // 48 : RIGHT_BRACKET
+		0x3080, // 49 : BACKSLASH
 		0x308c, // 4A : SEMICOLON
 		0x30f6, // 4B : APOSTROPHE
 		0x30fb, // 4C : SLASH
@@ -2225,14 +2230,14 @@ public class NicoWnnGJAJP extends NicoWnnG {
 		} else if (keyCode < keyCodeUs2JisFullHiraganaCharTable.length) {
 			if (shift || ev.isShiftPressed()) {
 				switch (mUseConvertKeyMap) {
-					case CONVERT_KEYMAP_KB_JIS_OS_US:
+					case CONVERT_KEYMAP_KB_US_OS_US:
 						return keyCodeUs2JisFullHiraganaShiftCharTable[keyCode];
 					default:
 						return keyCodeJis2JisFullHiraganaShiftCharTable[keyCode];
 				}
 			}
 			switch (mUseConvertKeyMap) {
-				case CONVERT_KEYMAP_KB_JIS_OS_US:
+				case CONVERT_KEYMAP_KB_US_OS_US:
 					return keyCodeUs2JisFullHiraganaCharTable[keyCode];
 				default:
 					return keyCodeJis2JisFullHiraganaCharTable[keyCode];
@@ -2310,7 +2315,7 @@ public class NicoWnnGJAJP extends NicoWnnG {
 		0x0000, // 41 : ENVELOPE
 		0x0000, // 42 : ENTER
 		0x0000, // 43 : DEL
-		0x0000, // 44 : GRAVE
+		0x30ed, // 44 : GRAVE
 		0x30db, // 45 : MINUS
 		0x30d8, // 46 : EQUALS
 		0x309b, // 47 : LEFT_BRACKET
@@ -2425,11 +2430,11 @@ public class NicoWnnGJAJP extends NicoWnnG {
 		0x0000, // 42 : ENTER
 		0x0000, // 43 : DEL
 		0x0000, // 44 : GRAVE
-		0x30db, // 45 : MINUS
+		0x30fc, // 45 : MINUS
 		0x30d8, // 46 : EQUALS
-		0x30fb, // 47 : LEFT_BRACKET
-		0x300c, // 48 : RIGHT_BRACKET
-		0x300d, // 49 : BACKSLASH
+		0x300c, // 47 : LEFT_BRACKET
+		0x300d, // 48 : RIGHT_BRACKET
+		0x30e0, // 49 : BACKSLASH
 		0x30ec, // 4A : SEMICOLON
 		0x30f6, // 4B : APOSTROPHE
 		0x30fb, // 4C : SLASH
@@ -2709,14 +2714,14 @@ public class NicoWnnGJAJP extends NicoWnnG {
 		} else if (keyCode < keyCodeUs2JisFullKatakanaCharTable.length) {
 			if (shift || ev.isShiftPressed()) {
 				switch (mUseConvertKeyMap) {
-					case CONVERT_KEYMAP_KB_JIS_OS_US:
+					case CONVERT_KEYMAP_KB_US_OS_US:
 						return keyCodeUs2JisFullKatakanaShiftCharTable[keyCode];
 					default:
 						return keyCodeJis2JisFullKatakanaShiftCharTable[keyCode];
 				}
 			}
 			switch (mUseConvertKeyMap) {
-				case CONVERT_KEYMAP_KB_JIS_OS_US:
+				case CONVERT_KEYMAP_KB_US_OS_US:
 					return keyCodeUs2JisFullKatakanaCharTable[keyCode];
 				default:
 					return keyCodeJis2JisFullKatakanaCharTable[keyCode];
@@ -2794,7 +2799,7 @@ public class NicoWnnGJAJP extends NicoWnnG {
 		0x0000, // 41 : ENVELOPE
 		0x0000, // 42 : ENTER
 		0x0000, // 43 : DEL
-		0x0000, // 44 : GRAVE
+		0xff9b, // 44 : GRAVE
 		0xff8e, // 45 : MINUS
 		0xff8d, // 46 : EQUALS
 		0xff9e, // 47 : LEFT_BRACKET
@@ -2909,11 +2914,11 @@ public class NicoWnnGJAJP extends NicoWnnG {
 		0x0000, // 42 : ENTER
 		0x0000, // 43 : DEL
 		0x0000, // 44 : GRAVE
-		0xff8e, // 45 : MINUS
+		0xff70, // 45 : MINUS
 		0xff8d, // 46 : EQUALS
-		0xff9e, // 47 : LEFT_BRACKET
-		0xff62, // 48 : RIGHT_BRACKET
-		0xff63, // 49 : BACKSLASH
+		0xff62, // 47 : LEFT_BRACKET
+		0xff63, // 48 : RIGHT_BRACKET
+		0xff91, // 49 : BACKSLASH
 		0xff9a, // 4A : SEMICOLON
 		0xff79, // 4B : APOSTROPHE
 		0xff65, // 4C : SLASH
@@ -3193,14 +3198,14 @@ public class NicoWnnGJAJP extends NicoWnnG {
 		} else if (keyCode < keyCodeUs2JisHalfKatakanaCharTable.length) {
 			if (shift || ev.isShiftPressed()) {
 				switch (mUseConvertKeyMap) {
-					case CONVERT_KEYMAP_KB_JIS_OS_US:
+					case CONVERT_KEYMAP_KB_US_OS_US:
 						return keyCodeUs2JisHalfKatakanaShiftCharTable[keyCode];
 					default:
 						return keyCodeJis2JisHalfKatakanaShiftCharTable[keyCode];
 				}
 			}
 			switch (mUseConvertKeyMap) {
-				case CONVERT_KEYMAP_KB_JIS_OS_US:
+				case CONVERT_KEYMAP_KB_US_OS_US:
 					return keyCodeUs2JisHalfKatakanaCharTable[keyCode];
 				default:
 					return keyCodeJis2JisHalfKatakanaCharTable[keyCode];
@@ -5227,6 +5232,17 @@ public class NicoWnnGJAJP extends NicoWnnG {
 	}
 
 	/**
+	 * Forget a selected word.
+	 *
+	 * @param word  A selected word
+	 */
+	private void forgetWord(final WnnWord word) {
+		if (word != null) {
+			mConverter.forget(word);
+		}
+	}
+
+	/**
 	 * Fits an editor info.
 	 *
 	 * @param preferences  The preference data.
@@ -5657,6 +5673,10 @@ public class NicoWnnGJAJP extends NicoWnnG {
 	
 	public boolean candidatesViewManagerIsIndicated() {
 		return (mCandidatesViewManager.getIndicateCandidateView() > 0);
+	}
+	
+	public int candidatesViewTextSize() {
+		return mCandidatesViewManager.getCandidateTextSize();
 	}
 	
     public void setSpecialCandidateOnKana12KeyToggleMode(int sw) {

@@ -67,7 +67,7 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 	/*********************************
 	 *
 	 */
-	public int GetFlickKeyCode(final int line, final int row) {
+	public int GetFlickChangeMap(final int line, final int row) {
 		return flickChangeMap[line][row];
 	}
 

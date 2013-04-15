@@ -125,7 +125,7 @@ public class NicoWnnGMain extends Activity {
 
 			key = "mainview_height_mode2";
 			int size = Integer.parseInt(pref.getString(key+mode, "0"))+1;
-			if (size > 8) size = 8;
+			if (size > 10) size = 10;
 			if (size < 1) size = 1;
 
 			return String.valueOf(size);

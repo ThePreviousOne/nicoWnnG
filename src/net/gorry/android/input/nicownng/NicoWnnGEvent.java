@@ -247,6 +247,11 @@ public class NicoWnnGEvent {
      */
     public static final int FORWARD_TOGGLE  = 0xF0000025;
 
+    /**
+     * Forget Candidate
+     */
+    public static final int FORGET_CANDIDATE  = 0xF0000026;
+
     /** Event code */
     public int code = UNDEFINED;
     /** Detail mode of the event */

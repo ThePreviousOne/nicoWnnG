@@ -152,7 +152,7 @@ public class MyKeyboardView extends KeyboardView {
 	private static final int MSG_REMOVE_PREVIEW = 2;
 
 	private static final int DELAY_BEFORE_PREVIEW = 0;
-	private static final int DELAY_AFTER_PREVIEW = 100;
+	private static final int DELAY_AFTER_PREVIEW = 200;
 	private static final int DELAY_AFTER_PREVIEW_FLICK = 250;
 	private static final int DEBOUNCE_TIME = 70;
 
@@ -295,7 +295,7 @@ public class MyKeyboardView extends KeyboardView {
 	}
 	
 	private static final String[] mCursorString = {"CURSOR"};
-	private void showKey(final int keyIndex, final int flingDir) {
+	private void showKey(final int keyIndex, int flingDir) {
 		final PopupWindow previewPopup = mPreviewPopup;
 		final Key[] keys = mKeys;
 		if (keyIndex < 0 || keyIndex >= mKeys.length) return;
@@ -331,10 +331,16 @@ public class MyKeyboardView extends KeyboardView {
 				dir2 = mDefaultSoftKeyboard.convertModeFlick(mDefaultSoftKeyboard.getTableIndex(mDefaultSoftKeyboard.getPrevInputKeyCode()), flingDir);
 				if (dir2 >= 0) {
 					keyString = mDefaultSoftKeyboard.convertFlickToKeyString(dir2);
+				} else {
+					flingDir = -1;
 				}
 				break;
 			}
-			mPreviewText.setBackgroundResource(mPreviewBackground[flingDir]);
+			if (flingDir >= 0) {
+				mPreviewText.setBackgroundResource(mPreviewBackground[flingDir]);
+			} else {
+				mPreviewText.setBackgroundResource(R.drawable.keyboard_key_feedback_background);
+			}
 		} else {
 			mPreviewText.setBackgroundResource(R.drawable.keyboard_key_feedback_background);
 		}
@@ -373,7 +379,10 @@ public class MyKeyboardView extends KeyboardView {
 				MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
 		int popupWidth = Math.max(mPreviewText.getMeasuredWidth(), mFirstKey.width 
 				+ mPreviewText.getPaddingLeft() + mPreviewText.getPaddingRight());
-		final int popupHeight = mPreviewHeight;
+		// final int popupHeight = Math.max(mPreviewHeight, key.height);
+		final float scale = getContext().getResources().getDisplayMetrics().density;
+		final int popupHeight = (int)(/*mKeyTextSize * scale*/ mPreviewTextSizeLarge * 1.25)
+				+ (mPreviewText.getPaddingTop() + mPreviewText.getPaddingBottom());
 		LayoutParams lp = mPreviewText.getLayoutParams();
 		if (lp != null) {
 			lp.width = popupWidth;
@@ -414,8 +423,7 @@ public class MyKeyboardView extends KeyboardView {
 		}
 
 		if (previewPopup.isShowing()) {
-			previewPopup.update(mPopupPreviewX, mPopupPreviewY,
-					popupWidth, popupHeight);
+			previewPopup.update(mPopupPreviewX, mPopupPreviewY, popupWidth, popupHeight);
 		} else {
 			previewPopup.setWidth(popupWidth);
 			previewPopup.setHeight(popupHeight);

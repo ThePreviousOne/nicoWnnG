@@ -530,6 +530,20 @@ public class NicoWnnGEngineJAJP implements WnnEngine {
         return (ret == 0);
     }
 
+    /** @see net.gorry.android.input.nicownng.WnnEngine#forget */
+    public boolean forget(WnnWord word) {
+        int ret = -1;
+        if (word.partOfSpeech.right == 0) {
+            word.partOfSpeech = mDictionaryJP.getPOS(WnnDictionary.POS_TYPE_MEISI);
+        }
+
+        WnnDictionary dict = mDictionaryJP;
+        ret = dict.forgetWord(word);
+        mClauseConverter.setDictionary(dict);
+
+        return (ret == 0);
+    }
+
     /** @see net.gorry.android.input.nicownng.WnnEngine#addWord */
     public int addWord(WnnWord word) {
         mDictionaryJP.setInUseState( true );

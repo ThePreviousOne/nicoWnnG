@@ -385,7 +385,7 @@ public class DefaultSoftKeyboard implements InputViewManager, KeyboardView.OnKey
 	 * flick sensivity
 	 */
 	public static final int[] flickSensitivityModeTable = {
-		15, 20, 25, 30, 35, 40, 50, 60
+		15, 20, 25, 30, 35, 40, 50, 60, 80, 100,
 	};
 	public int mFlickSensitivity = 0;
 	public boolean mFlickGuide = true;
@@ -394,7 +394,7 @@ public class DefaultSoftKeyboard implements InputViewManager, KeyboardView.OnKey
 	 */
 	public int mInputViewHeightIndex = 0;
 	public final static int mKeyboardPaddingTable[] = {
-		13, 19, 25, 31, 37, 43, 49, 55
+		13, 19, 25, 31, 37, 43, 49, 55, 67, 79,
 	};
 
 	/** Definition for {@code mInputType} (toggle) */
@@ -583,7 +583,9 @@ public class DefaultSoftKeyboard implements InputViewManager, KeyboardView.OnKey
 			final int h = 2;
 			final View v = mKeyboardView;
 			final Context c = v.getContext();
-			mMyPopupInputImeMode = new MyPopupInputImeMode(c, w, h, (int)(v.getWidth()/6), mCurrentKeyboard.getKeyHeight() );
+			final int bw = (int)(v.getWidth()/6);
+			final int bh = mCurrentKeyboard.getKeyHeight();
+			mMyPopupInputImeMode = new MyPopupInputImeMode(c, w, h, bw, bh);
 			final MyPopupInputImeMode dlg = mMyPopupInputImeMode;
 			{
 				dlg.setItemText(0, 0, mWnn.getString(R.string.key_12key_switch_full_hiragana));
@@ -878,13 +880,13 @@ public class DefaultSoftKeyboard implements InputViewManager, KeyboardView.OnKey
 	protected boolean mNoInput = true;
 
 	/** Vibratior for key click vibration */
-	protected Vibrator mVibrator = null;
+	static Vibrator mVibrator = null;
 
 	/** key click sound */
-	protected SoundPool mSoundPool = null;
-	protected int mSound = 0;
-	protected float mSoundVolume = 0.0F;
-	protected int mSoundStreamId = 0;
+	static SoundPool mSoundPool = null;
+	static int mSound = 0;
+	static float mSoundVolume = 0.0F;
+	static int mSoundStreamId = 0;
 
 	/** Key toggle cycle table currently using */
 	protected String[] mCurrentCycleTable;
@@ -1533,13 +1535,14 @@ public class DefaultSoftKeyboard implements InputViewManager, KeyboardView.OnKey
 		}
 		// entry gesture detector
 		mDetector = new GestureDetector(this);
+		mDetector.setIsLongpressEnabled(false);
 		if (NICOFLICK_1STROKE == mFlickNicoInput) {
-			mDetector.setIsLongpressEnabled(true);
+			/// mDetector.setIsLongpressEnabled(true);
 			mIsActiveLongPress = true;
 		}
 		else{
 			// mDetector.setIsLongpressEnabled(false);
-			mDetector.setIsLongpressEnabled(true);
+			/// mDetector.setIsLongpressEnabled(true);
 			mIsActiveLongPress = false;
 		}
 		mMetrics.setToDefaults();
@@ -1748,11 +1751,11 @@ public class DefaultSoftKeyboard implements InputViewManager, KeyboardView.OnKey
 		mFlickGuide = mWnn.getOrientPrefBoolean(pref, "flick_guide", true);
 		if (null != mDetector) {
 			if (NICOFLICK_1STROKE == mFlickNicoInput) {
-				mDetector.setIsLongpressEnabled(true);
+				/// mDetector.setIsLongpressEnabled(true);
 				mIsActiveLongPress = true;
 			}
 			else{
-				mDetector.setIsLongpressEnabled(true);
+				/// mDetector.setIsLongpressEnabled(true);
 				// mDetector.setIsLongpressEnabled(false);
 				mIsActiveLongPress = false;
 			}
@@ -1862,22 +1865,7 @@ public class DefaultSoftKeyboard implements InputViewManager, KeyboardView.OnKey
 	public void onPress(final int primaryCode) {
 		mKeyRepeatReleased = false;
 		mPressedKeyCode = primaryCode;
-		/* key click sound & vibration */
-		if (mSoundPool != null) {
-			try {
-				if (mSoundStreamId != 0) {
-					mSoundPool.stop(mSoundStreamId);
-					mSoundStreamId = 0;
-				}
-				mSoundStreamId = mSoundPool.play(mSound, mSoundVolume, mSoundVolume, 0, 0, 1);
-			}
-			catch (final Exception ex) {
-				//
-			}
-		}
-		if (mVibrator != null) {
-			try { mVibrator.vibrate(30); } catch (final Exception ex) { }
-		}
+		doClickFeedback(0);
 		// check flick
 		if (false == mNicoFirst) {
 			mPrevInputKeyCode = primaryCode;
@@ -1903,6 +1891,25 @@ public class DefaultSoftKeyboard implements InputViewManager, KeyboardView.OnKey
 		showPreview(mKeyIndex, -1);
 	}
 
+	static public void doClickFeedback(int type) {
+		/* key click sound & vibration */
+		if (mSoundPool != null) {
+			try {
+				if (mSoundStreamId != 0) {
+					mSoundPool.stop(mSoundStreamId);
+					mSoundStreamId = 0;
+				}
+				mSoundStreamId = mSoundPool.play(mSound, mSoundVolume, mSoundVolume, 0, 0, 1);
+			}
+			catch (final Exception ex) {
+				//
+			}
+		}
+		if (mVibrator != null) {
+			try { mVibrator.vibrate(30); } catch (final Exception ex) { }
+		}
+	}
+	
 	/** @see android.inputmethodservice.KeyboardView.OnKeyboardActionListener#onText */
 	@Override
 	public void onText(final CharSequence text) {}
@@ -2140,7 +2147,7 @@ public class DefaultSoftKeyboard implements InputViewManager, KeyboardView.OnKey
 		mGestureX = ev2.getRawX();
 		mGestureY = ev2.getRawY();
 		// Log.d("NicoWnnG", "onScroll: x="+mGestureX+", y="+mGestureY);
-		final int flingdir = checkFlickKeyCode(false, true);
+		final int flingdir = checkFlickKeyCode(true, true);
 		if (mKeyboardView.getLastFlingDir() != flingdir) {
 			showPreview(mKeyIndex, flingdir);
 		} else if (flingdir == -1) {
@@ -2257,9 +2264,9 @@ public class DefaultSoftKeyboard implements InputViewManager, KeyboardView.OnKey
 		int keycode = -1;
 		if (length < flickSensitivityModeTable[mFlickSensitivity]) {
 			if (mIsActiveLongPress) {
-//				if (!mIsLongPress) {
+				// if (!mIsLongPress) {
 					keydir = 0;
-//				}
+				// }
 			}
 		} else {
 			if ((getrot >= 45.0f) && (getrot < 135.0f)) {

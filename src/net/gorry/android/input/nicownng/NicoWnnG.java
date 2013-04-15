@@ -307,34 +307,34 @@ public class NicoWnnG extends InputMethodService {
 			}
 		}
 		switch (scancode) {
-			// TF300T対策
-			case 124:  // "￥ー"キーをUSモードで入力
-				return new KeyEvent(
-					event.getDownTime(),
-					event.getEventTime(),
-					event.getAction(),
-					DefaultSoftKeyboard.KEYCODE_JIS_CHOUON, // event.getKeyCode(),
-					event.getRepeatCount(),
-					event.getMetaState(),
-					event.getDeviceId(),
-					event.getScanCode(),
-					event.getFlags()
-				);
-			/*
-			case 89:  // "ろ"キーをUSモードで入力
-				return new KeyEvent(
-					event.getDownTime(),
-					event.getEventTime(),
-					event.getAction(),
-					DefaultSoftKeyboard.KEYCODE_JIS_RO, // event.getKeyCode(),
-					event.getRepeatCount(),
-					event.getMetaState(),
-					event.getDeviceId(),
-					event.getScanCode(),
-					event.getFlags()
-				);
-			*/
-				
+		// TF300T対策
+		case 124:  // "￥ー"キーをUSモードで入力
+			return new KeyEvent(
+				event.getDownTime(),
+				event.getEventTime(),
+				event.getAction(),
+				DefaultSoftKeyboard.KEYCODE_JIS_CHOUON, // event.getKeyCode(),
+				event.getRepeatCount(),
+				event.getMetaState(),
+				event.getDeviceId(),
+				event.getScanCode(),
+				event.getFlags()
+			);
+		/*
+		case 89:  // "ろ"キーをUSモードで入力
+			return new KeyEvent(
+				event.getDownTime(),
+				event.getEventTime(),
+				event.getAction(),
+				DefaultSoftKeyboard.KEYCODE_JIS_RO, // event.getKeyCode(),
+				event.getRepeatCount(),
+				event.getMetaState(),
+				event.getDeviceId(),
+				event.getScanCode(),
+				event.getFlags()
+			);
+		*/
+			
 		case 93:  // ひらがな/カタカナ/ローマ字キー
 			return new KeyEvent(
 				event.getDownTime(),
@@ -377,6 +377,28 @@ public class NicoWnnG extends InputMethodService {
 		return event;
 	}
 
+
+	private KeyEvent convKeyCode_US_on_US(KeyEvent event) {
+		int scancode = event.getScanCode();
+		switch (scancode) {
+		// たまたま手許にあったLBR-BTK1
+		case 172:  // ESCキーの位置にあるHOMEキー
+			return new KeyEvent(
+				event.getDownTime(),
+				event.getEventTime(),
+				event.getAction(),
+				KeyEvent.KEYCODE_BACK, // event.getKeyCode(),
+				event.getRepeatCount(),
+				event.getMetaState(),
+				event.getDeviceId(),
+				event.getScanCode(),
+				event.getFlags()
+			);
+
+		}
+		return event;
+	}
+
 	/** @see android.inputmethodservice.InputMethodService#onKeyDown */
 	@Override public boolean onKeyDown(final int keyCode, KeyEvent event) {
 		boolean ret;
@@ -390,6 +412,9 @@ public class NicoWnnG extends InputMethodService {
 		switch (mUseConvertKeyMap) {
 			case CONVERT_KEYMAP_KB_JIS_OS_US:
 				event = convKeyCode_JIS_on_US(event);
+				break;
+			case CONVERT_KEYMAP_KB_US_OS_US:
+				event = convKeyCode_US_on_US(event);
 				break;
 			default:
 				event = convKeyCode_JIS_on_JIS(event);
@@ -1110,6 +1135,11 @@ public class NicoWnnG extends InputMethodService {
 		int l_textsize = -1;
 		int l_kanamode = -1;
 
+		int candidateheight = size;
+		if (candidateheight > 4) {
+			candidateheight = 4;
+		}
+
 		final int p_keytype1, p_keytype2;
 		{
 			StringTokenizer st = new StringTokenizer(portrait, "_");
@@ -1130,9 +1160,9 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 1;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
-						p_kanamode = 0;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
+						p_kanamode = 8;
 						break;
 					case 2:  // フリック
 						p_nicoflick_mode = 1;
@@ -1143,9 +1173,9 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 1;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
-						p_kanamode = 0;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
+						p_kanamode = 8;
 						break;
 					case 3:  // 2タッチ
 						p_nicoflick_mode = 0;
@@ -1156,9 +1186,9 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 1;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
-						p_kanamode = 0;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
+						p_kanamode = 8;
 						break;
 				}
 				break;
@@ -1174,8 +1204,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 4;
 						break;
 					case 2:  // ローマ字(コンパクト)
@@ -1187,8 +1217,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 8;
 						break;
 					case 3:  // ローマ字(ミニ)
@@ -1200,8 +1230,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 3;
 						break;
 					case 4:  // ローマ字(ミニ横)
@@ -1213,8 +1243,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 7;
 						break;
 					case 5:  // JISかな
@@ -1226,8 +1256,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 5;
 						break;
 					case 6:  // 五十音かな
@@ -1239,8 +1269,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 6;
 						break;
 					case 7:  // ローマ字(旧)
@@ -1252,8 +1282,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 0;
 						break;
 					case 8:  // JISかな(旧)
@@ -1265,8 +1295,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 1;
 						break;
 					case 9:  // 五十音かな(旧)
@@ -1278,8 +1308,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 2;
 						break;
 				}
@@ -1306,8 +1336,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 1;
 						l_size = size;
 						l_maxline = 1;
-						l_candidateheight = size;
-						l_textsize = size;
+						l_candidateheight = candidateheight;
+						l_textsize = candidateheight;
 						l_kanamode = 0;
 						break;
 					case 2:  // フリック
@@ -1319,8 +1349,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 1;
 						l_size = size;
 						l_maxline = 1;
-						l_candidateheight = size;
-						l_textsize = size;
+						l_candidateheight = candidateheight;
+						l_textsize = candidateheight;
 						l_kanamode = 0;
 						break;
 					case 3:  // 2タッチ
@@ -1332,8 +1362,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 1;
 						l_size = size;
 						l_maxline = 1;
-						l_candidateheight = size;
-						l_textsize = size;
+						l_candidateheight = candidateheight;
+						l_textsize = candidateheight;
 						l_kanamode = 0;
 						break;
 				}
@@ -1350,8 +1380,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size;
 						l_maxline = 1;
-						l_candidateheight = size;
-						l_textsize = size;
+						l_candidateheight = candidateheight;
+						l_textsize = candidateheight;
 						l_kanamode = 4;
 						break;
 					case 2:  // ローマ字(コンパクト)
@@ -1363,8 +1393,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size;
 						l_maxline = 1;
-						l_candidateheight = size;
-						l_textsize = size;
+						l_candidateheight = candidateheight;
+						l_textsize = candidateheight;
 						l_kanamode = 8;
 						break;
 					case 3:  // ローマ字(ミニ)
@@ -1376,8 +1406,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size;
 						l_maxline = 1;
-						l_candidateheight = size;
-						l_textsize = size;
+						l_candidateheight = candidateheight;
+						l_textsize = candidateheight;
 						l_kanamode = 3;
 						break;
 					case 4:  // ローマ字(ミニ横)
@@ -1389,8 +1419,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size;
 						l_maxline = 1;
-						l_candidateheight = size;
-						l_textsize = size;
+						l_candidateheight = candidateheight;
+						l_textsize = candidateheight;
 						l_kanamode = 7;
 						break;
 					case 5:  // JISかな
@@ -1402,8 +1432,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size;
 						l_maxline = 1;
-						l_candidateheight = size;
-						l_textsize = size;
+						l_candidateheight = candidateheight;
+						l_textsize = candidateheight;
 						l_kanamode = 5;
 						break;
 					case 6:  // 五十音かな
@@ -1415,8 +1445,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size;
 						l_maxline = 1;
-						l_candidateheight = size;
-						l_textsize = size;
+						l_candidateheight = candidateheight;
+						l_textsize = candidateheight;
 						l_kanamode = 6;
 						break;
 					case 7:  // ローマ字(旧)
@@ -1428,8 +1458,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size;
 						l_maxline = 1;
-						l_candidateheight = size;
-						l_textsize = size;
+						l_candidateheight = candidateheight;
+						l_textsize = candidateheight;
 						l_kanamode = 0;
 						break;
 					case 8:  // JISかな(旧)
@@ -1441,8 +1471,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size;
 						l_maxline = 1;
-						l_candidateheight = size;
-						l_textsize = size;
+						l_candidateheight = candidateheight;
+						l_textsize = candidateheight;
 						l_kanamode = 1;
 						break;
 					case 9:  // 五十音かな(旧)
@@ -1454,8 +1484,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size;
 						l_maxline = 1;
-						l_candidateheight = size;
-						l_textsize = size;
+						l_candidateheight = candidateheight;
+						l_textsize = candidateheight;
 						l_kanamode = 2;
 						break;
 				}
@@ -1545,7 +1575,7 @@ public class NicoWnnG extends InputMethodService {
 	}
 
 	public void setEasySetting_Phone(final String portrait, final String landscape, final int size) {
-		final int size2 = (size-1 > 1) ? size-1 : 1;
+		final int size2 = size;
 		int different_pl = 1;
 		int p_nicoflick_mode = -1;
 		int p_flick_sensitivity_mode = -1;
@@ -1570,6 +1600,16 @@ public class NicoWnnG extends InputMethodService {
 		int l_textsize = -1;
 		int l_kanamode = -1;
 
+		int candidateheight = size;
+		if (candidateheight > 4) {
+			candidateheight = 4;
+		}
+
+		int candidateheight2 = size;
+		if (candidateheight2 > 4) {
+			candidateheight2 = 4;
+		}
+
 		final int p_keytype1, p_keytype2;
 		{
 			StringTokenizer st = new StringTokenizer(portrait, "_");
@@ -1590,8 +1630,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 1;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 0;
 						break;
 					case 2:  // フリック
@@ -1603,8 +1643,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 1;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 0;
 						break;
 					case 3:  // 2タッチ
@@ -1616,8 +1656,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 1;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 0;
 						break;
 				}
@@ -1634,8 +1674,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 4;
 						break;
 					case 2:  // ローマ字(コンパクト)
@@ -1647,8 +1687,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 8;
 						break;
 					case 3:  // ローマ字(ミニ)
@@ -1660,8 +1700,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 3;
 						break;
 					case 4:  // ローマ字(ミニ横)
@@ -1673,8 +1713,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 7;
 						break;
 					case 5:  // JISかな
@@ -1686,8 +1726,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 5;
 						break;
 					case 6:  // 五十音かな
@@ -1699,8 +1739,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 6;
 						break;
 					case 7:  // ローマ字(旧)
@@ -1712,8 +1752,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 0;
 						break;
 					case 8:  // JISかな(旧)
@@ -1725,8 +1765,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 1;
 						break;
 					case 9:  // 五十音かな(旧)
@@ -1738,8 +1778,8 @@ public class NicoWnnG extends InputMethodService {
 						p_change_num_12key = 0;
 						p_size = size;
 						p_maxline = 3;
-						p_candidateheight = size;
-						p_textsize = size;
+						p_candidateheight = candidateheight;
+						p_textsize = candidateheight;
 						p_kanamode = 2;
 						break;
 				}
@@ -1766,8 +1806,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 1;
 						l_size = size2;
 						l_maxline = 1;
-						l_candidateheight = size2;
-						l_textsize = size2;
+						l_candidateheight = candidateheight2;
+						l_textsize = candidateheight2;
 						l_kanamode = 0;
 						break;
 					case 2:  // フリック
@@ -1779,8 +1819,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 1;
 						l_size = size2;
 						l_maxline = 1;
-						l_candidateheight = size2;
-						l_textsize = size2;
+						l_candidateheight = candidateheight2;
+						l_textsize = candidateheight2;
 						l_kanamode = 0;
 						break;
 					case 3:  // 2タッチ
@@ -1792,8 +1832,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 1;
 						l_size = size2;
 						l_maxline = 1;
-						l_candidateheight = size2;
-						l_textsize = size2;
+						l_candidateheight = candidateheight2;
+						l_textsize = candidateheight2;
 						l_kanamode = 0;
 						break;
 				}
@@ -1810,8 +1850,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size2;
 						l_maxline = 1;
-						l_candidateheight = size2;
-						l_textsize = size2;
+						l_candidateheight = candidateheight2;
+						l_textsize = candidateheight2;
 						l_kanamode = 4;
 						break;
 					case 2:  // ローマ字(コンパクト)
@@ -1823,8 +1863,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size2;
 						l_maxline = 1;
-						l_candidateheight = size2;
-						l_textsize = size2;
+						l_candidateheight = candidateheight2;
+						l_textsize = candidateheight2;
 						l_kanamode = 8;
 						break;
 					case 3:  // ローマ字(ミニ)
@@ -1836,8 +1876,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size2;
 						l_maxline = 1;
-						l_candidateheight = size2;
-						l_textsize = size2;
+						l_candidateheight = candidateheight2;
+						l_textsize = candidateheight2;
 						l_kanamode = 3;
 						break;
 					case 4:  // ローマ字(ミニ横)
@@ -1849,8 +1889,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size2;
 						l_maxline = 1;
-						l_candidateheight = size2;
-						l_textsize = size2;
+						l_candidateheight = candidateheight2;
+						l_textsize = candidateheight2;
 						l_kanamode = 7;
 						break;
 					case 5:  // JISかな
@@ -1862,8 +1902,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size2;
 						l_maxline = 1;
-						l_candidateheight = size2;
-						l_textsize = size2;
+						l_candidateheight = candidateheight2;
+						l_textsize = candidateheight2;
 						l_kanamode = 5;
 						break;
 					case 6:  // 五十音かな
@@ -1875,8 +1915,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size2;
 						l_maxline = 1;
-						l_candidateheight = size2;
-						l_textsize = size2;
+						l_candidateheight = candidateheight2;
+						l_textsize = candidateheight2;
 						l_kanamode = 6;
 						break;
 					case 7:  // ローマ字(旧)
@@ -1888,8 +1928,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size2;
 						l_maxline = 1;
-						l_candidateheight = size2;
-						l_textsize = size2;
+						l_candidateheight = candidateheight2;
+						l_textsize = candidateheight2;
 						l_kanamode = 0;
 						break;
 					case 8:  // JISかな(旧)
@@ -1901,8 +1941,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size2;
 						l_maxline = 1;
-						l_candidateheight = size2;
-						l_textsize = size2;
+						l_candidateheight = candidateheight2;
+						l_textsize = candidateheight2;
 						l_kanamode = 1;
 						break;
 					case 9:  // 五十音かな(旧)
@@ -1914,8 +1954,8 @@ public class NicoWnnG extends InputMethodService {
 						l_change_num_12key = 0;
 						l_size = size2;
 						l_maxline = 1;
-						l_candidateheight = size2;
-						l_textsize = size2;
+						l_candidateheight = candidateheight2;
+						l_textsize = candidateheight2;
 						l_kanamode = 2;
 						break;
 				}
@@ -2068,6 +2108,7 @@ public class NicoWnnG extends InputMethodService {
 	/** キーボード配列の変換 */
 	public static final int CONVERT_KEYMAP_NONE = 0;
 	public static final int CONVERT_KEYMAP_KB_JIS_OS_US = 1;
+	public static final int CONVERT_KEYMAP_KB_US_OS_US = 2;
 	protected int mUseConvertKeyMap = CONVERT_KEYMAP_KB_JIS_OS_US;
 	protected boolean mUseZenkakuKeyToMoji = true;
 

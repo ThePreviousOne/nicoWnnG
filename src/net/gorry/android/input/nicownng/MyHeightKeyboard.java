@@ -22,10 +22,10 @@ public class MyHeightKeyboard extends Keyboard {
 	private static final boolean V = false;
 
 	private static final int keyHeightTablePortrait[] = {
-		36, 48, 60, 72, 84, 96, 108, 120,
+		36, 48, 60, 72, 84, 96, 108, 120, 144, 168
 	};
 	private static final int keyHeightTableLandscape[] = {
-		24, 36, 48, 60, 72, 84, 96, 108,
+		24, 36, 48, 60, 72, 84, 96, 108, 132, 156
 	};
 
 	private Context mContext;
@@ -52,6 +52,8 @@ public class MyHeightKeyboard extends Keyboard {
 		R.xml.keyboard_popup_12key_jp_5,
 		R.xml.keyboard_popup_12key_jp_6,
 		R.xml.keyboard_popup_12key_jp_7,
+		R.xml.keyboard_popup_12key_jp_8,
+		R.xml.keyboard_popup_12key_jp_9,
 	};
 	
 	private static final int popupKeyboardTable_qwerty[] = {
@@ -63,6 +65,8 @@ public class MyHeightKeyboard extends Keyboard {
 		R.xml.keyboard_popup_qwerty_jp_5,
 		R.xml.keyboard_popup_qwerty_jp_6,
 		R.xml.keyboard_popup_qwerty_jp_7,
+		R.xml.keyboard_popup_qwerty_jp_8,
+		R.xml.keyboard_popup_qwerty_jp_9,
 	};
 	
 	private static final int popupKeyboardTable_subten_qwerty[] = {
@@ -74,6 +78,8 @@ public class MyHeightKeyboard extends Keyboard {
 		R.xml.keyboard_popup_subten_qwerty_jp_5,
 		R.xml.keyboard_popup_subten_qwerty_jp_6,
 		R.xml.keyboard_popup_subten_qwerty_jp_7,
+		R.xml.keyboard_popup_subten_qwerty_jp_8,
+		R.xml.keyboard_popup_subten_qwerty_jp_9,
 	};
 	
 	private static final int popupKeyboardTable_subten_12key[] = {
@@ -85,6 +91,8 @@ public class MyHeightKeyboard extends Keyboard {
 		R.xml.keyboard_popup_subten_12key_jp_5,
 		R.xml.keyboard_popup_subten_12key_jp_6,
 		R.xml.keyboard_popup_subten_12key_jp_7,
+		R.xml.keyboard_popup_subten_12key_jp_8,
+		R.xml.keyboard_popup_subten_12key_jp_9,
 	};
 	
 	private static final int popupKeyboardTable_nico2[] = {
@@ -96,6 +104,8 @@ public class MyHeightKeyboard extends Keyboard {
 		R.xml.keyboard_popup_nico2_jp_5,
 		R.xml.keyboard_popup_nico2_jp_6,
 		R.xml.keyboard_popup_nico2_jp_7,
+		R.xml.keyboard_popup_nico2_jp_8,
+		R.xml.keyboard_popup_nico2_jp_9,
 	};
 
 	private static final int popupKeyboardTable[][] = {
@@ -165,10 +175,37 @@ public class MyHeightKeyboard extends Keyboard {
 			// ポップアップキーボードのサイズ変更
 			if (key.codes.length > 0) {
 				switch (key.codes[0]) {
+					case DefaultSoftKeyboard.KEYCODE_JP12_TOGGLE_MODE2:
+					case DefaultSoftKeyboard.KEYCODE_QWERTY_TOGGLE_MODE2:
+					{
+						switch (key.popupResId) {
+							case R.xml.keyboard_popup_subten_qwerty_jp_0: 
+							case R.xml.keyboard_popup_subten_qwerty_jp_1: 
+							case R.xml.keyboard_popup_subten_qwerty_jp_2: 
+							case R.xml.keyboard_popup_subten_qwerty_jp_3: 
+							case R.xml.keyboard_popup_subten_qwerty_jp_4: 
+							case R.xml.keyboard_popup_subten_qwerty_jp_5: 
+							case R.xml.keyboard_popup_subten_qwerty_jp_6: 
+							case R.xml.keyboard_popup_subten_qwerty_jp_7: 
+							case R.xml.keyboard_popup_subten_qwerty_jp_8: 
+							case R.xml.keyboard_popup_subten_qwerty_jp_9: 
+								if (isPortrait) {
+									key.popupResId = 0;									
+								} else {
+									if (key.codes[0] == DefaultSoftKeyboard.KEYCODE_JP12_TOGGLE_MODE2) {
+										key.codes[0] = DefaultSoftKeyboard.KEYCODE_JP12_TOGGLE_MODE;
+									} else {
+										key.codes[0] = DefaultSoftKeyboard.KEYCODE_QWERTY_TOGGLE_MODE;
+									}
+									
+								}
+						}						
+					}
+					break;
+				}
+				switch (key.codes[0]) {
 					case DefaultSoftKeyboard.KEYCODE_JP12_TOGGLE_MODE:
-					// case DefaultSoftKeyboard.KEYCODE_JP12_TOGGLE_MODE2:
 					case DefaultSoftKeyboard.KEYCODE_QWERTY_TOGGLE_MODE:
-					// case DefaultSoftKeyboard.KEYCODE_QWERTY_TOGGLE_MODE2:
 					{
 						int n = 0;
 						for (int j=0; j<htable.length; j++) {
@@ -185,6 +222,8 @@ public class MyHeightKeyboard extends Keyboard {
 							case R.xml.keyboard_popup_12key_jp_5:
 							case R.xml.keyboard_popup_12key_jp_6:
 							case R.xml.keyboard_popup_12key_jp_7:
+							case R.xml.keyboard_popup_12key_jp_8:
+							case R.xml.keyboard_popup_12key_jp_9:
 								keyType = 0;
 								break;
 							case R.xml.keyboard_popup_qwerty_jp_0:
@@ -195,6 +234,8 @@ public class MyHeightKeyboard extends Keyboard {
 							case R.xml.keyboard_popup_qwerty_jp_5:
 							case R.xml.keyboard_popup_qwerty_jp_6:
 							case R.xml.keyboard_popup_qwerty_jp_7:
+							case R.xml.keyboard_popup_qwerty_jp_8:
+							case R.xml.keyboard_popup_qwerty_jp_9:
 								keyType = 1;
 								break;
 							case R.xml.keyboard_popup_nico2_jp_0: 
@@ -205,6 +246,8 @@ public class MyHeightKeyboard extends Keyboard {
 							case R.xml.keyboard_popup_nico2_jp_5: 
 							case R.xml.keyboard_popup_nico2_jp_6: 
 							case R.xml.keyboard_popup_nico2_jp_7:
+							case R.xml.keyboard_popup_nico2_jp_8:
+							case R.xml.keyboard_popup_nico2_jp_9:
 								keyType = 2;
 								break;
 							case R.xml.keyboard_popup_subten_qwerty_jp_0: 
@@ -215,6 +258,8 @@ public class MyHeightKeyboard extends Keyboard {
 							case R.xml.keyboard_popup_subten_qwerty_jp_5: 
 							case R.xml.keyboard_popup_subten_qwerty_jp_6: 
 							case R.xml.keyboard_popup_subten_qwerty_jp_7: 
+							case R.xml.keyboard_popup_subten_qwerty_jp_8: 
+							case R.xml.keyboard_popup_subten_qwerty_jp_9: 
 								keyType = 3;
 								break;
 							case R.xml.keyboard_popup_subten_12key_jp_0: 
@@ -225,6 +270,8 @@ public class MyHeightKeyboard extends Keyboard {
 							case R.xml.keyboard_popup_subten_12key_jp_5: 
 							case R.xml.keyboard_popup_subten_12key_jp_6: 
 							case R.xml.keyboard_popup_subten_12key_jp_7: 
+							case R.xml.keyboard_popup_subten_12key_jp_8: 
+							case R.xml.keyboard_popup_subten_12key_jp_9: 
 								keyType = 4;
 								break;
 						}
@@ -241,6 +288,7 @@ public class MyHeightKeyboard extends Keyboard {
 						}
 						// Log.d("nicoWnnG", "resourceName="+context.getResources().getResourceName(key.popupResId));
 					}
+					break;
 				}
 			}
 

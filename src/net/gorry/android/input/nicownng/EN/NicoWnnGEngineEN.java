@@ -321,6 +321,11 @@ public class NicoWnnGEngineEN implements WnnEngine {
         return ( mDictionary.learnWord(word) == 0 );
     }
 
+    /** @see net.gorry.android.input.nicownng.WnnEngine#forget */
+    public boolean forget(WnnWord word) {
+        return ( mDictionary.forgetWord(word) == 0 );
+    }
+
     /** @see net.gorry.android.input.nicownng.WnnEngine#addWord */
     public int addWord(WnnWord word) {
         WnnDictionary dict = mDictionary;

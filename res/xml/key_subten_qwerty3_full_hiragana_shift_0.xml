@@ -22,7 +22,7 @@
 		<Key android:codes="-217" android:keyIcon="@drawable/key_qwerty_right" android:iconPreview="@drawable/key_qwerty_right_b" android:isRepeatable="false" android:keyEdgeFlags="right" />
 	</Row>
 	<Row>
-		<Key android:codes="-230" android:keyIcon="@drawable/key_qwerty_mode_hira" android:iconPreview="@drawable/key_mode_change_b" android:popupKeyboard="@xml/keyboard_popup_subten_qwerty_jp_0" android:isRepeatable="false" android:keyEdgeFlags="left" />
+		<Key android:codes="-237" android:keyIcon="@drawable/key_qwerty_mode_hira" android:iconPreview="@drawable/key_mode_change_b" android:popupKeyboard="@xml/keyboard_popup_subten_qwerty_jp_0" android:isRepeatable="false" android:keyEdgeFlags="left" />
 		<Key android:codes="-1001" android:keyLabel="@string/key_usersymbol_zen_hiragana" />
 		<Key android:codes="-106" android:keyIcon="@drawable/key_qwerty_sym_mushroom" android:iconPreview="@drawable/key_qwerty_sym_mushroom_b" android:keyEdgeFlags="right" />
 		<Key android:codes="-1" android:keyIcon="@drawable/key_qwerty_shift" android:iconPreview="@drawable/key_qwerty_shift_b" android:isModifier="true" android:isSticky="true" android:keyEdgeFlags="right" />

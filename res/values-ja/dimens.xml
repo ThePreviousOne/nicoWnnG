@@ -25,6 +25,8 @@
   <dimen name="popup_12key_height_5">112px</dimen>
   <dimen name="popup_12key_height_6">128px</dimen>
   <dimen name="popup_12key_height_7">144px</dimen>
+  <dimen name="popup_12key_height_8">160px</dimen>
+  <dimen name="popup_12key_height_9">176px</dimen>
 
   <dimen name="popup_qwerty_height_0">32px</dimen>
   <dimen name="popup_qwerty_height_1">48px</dimen>
@@ -34,6 +36,8 @@
   <dimen name="popup_qwerty_height_5">112px</dimen>
   <dimen name="popup_qwerty_height_6">128px</dimen>
   <dimen name="popup_qwerty_height_7">144px</dimen>
+  <dimen name="popup_qwerty_height_8">160px</dimen>
+  <dimen name="popup_qwerty_height_9">176px</dimen>
 
   <dimen name="popup_nico2_height_0">24px</dimen>
   <dimen name="popup_nico2_height_1">36px</dimen>
@@ -43,6 +47,8 @@
   <dimen name="popup_nico2_height_5">84px</dimen>
   <dimen name="popup_nico2_height_6">96px</dimen>
   <dimen name="popup_nico2_height_7">108px</dimen>
+  <dimen name="popup_nico2_height_8">120px</dimen>
+  <dimen name="popup_nico2_height_9">132px</dimen>
 
   <dimen name="popup_subten_qwerty_height_0">24px</dimen>
   <dimen name="popup_subten_qwerty_height_1">40px</dimen>
@@ -52,6 +58,8 @@
   <dimen name="popup_subten_qwerty_height_5">96px</dimen>
   <dimen name="popup_subten_qwerty_height_6">108px</dimen>
   <dimen name="popup_subten_qwerty_height_7">120px</dimen>
+  <dimen name="popup_subten_qwerty_height_8">132px</dimen>
+  <dimen name="popup_subten_qwerty_height_9">144px</dimen>
 
   <dimen name="popup_subten_12key_height_0">12px</dimen>
   <dimen name="popup_subten_12key_height_1">24px</dimen>
@@ -61,6 +69,8 @@
   <dimen name="popup_subten_12key_height_5">64px</dimen>
   <dimen name="popup_subten_12key_height_6">72px</dimen>
   <dimen name="popup_subten_12key_height_7">80px</dimen>
+  <dimen name="popup_subten_12key_height_8">88px</dimen>
+  <dimen name="popup_subten_12key_height_9">96px</dimen>
 
   <dimen name="candidate_font_size">12sp</dimen>
   <dimen name="candidate_delete_word_size">32dip</dimen>

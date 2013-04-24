@@ -109,7 +109,7 @@ public class NicoWnnG extends InputMethodService {
 	 */
 	public NicoWnnG() {
 		super();
-		// Log.w("NicoWnnG", "public NicoWnnG()");
+        // Log.w("NicoWnnG", "public NicoWnnG()");
 	}
 
 	public NicoWnnG(final Context context) {

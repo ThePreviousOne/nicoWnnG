@@ -67,8 +67,28 @@ public class SetupKeyboardBell extends SetupKeyboard {
 	/*********************************
 	 *
 	 */
-	public int GetFlickChangeMap(final int line, final int row) {
-		return flickChangeMap[line][row];
+	@Override
+	public int GetFlickChangeMap(final int keymode, final int line, final int row) {
+		switch (keymode) {
+		  case DefaultSoftKeyboard.KEYMODE_JA_FULL_NICO:
+			return flickHiraganaChangeMap[line][row];
+		  case DefaultSoftKeyboard.KEYMODE_JA_FULL_NICO_KATAKANA:
+			return flickHiraganaChangeMap[line][row];
+		  case DefaultSoftKeyboard.KEYMODE_JA_HALF_NICO_KATAKANA:
+			return flickHiraganaChangeMap[line][row];
+		  case DefaultSoftKeyboard.KEYMODE_JA_HALF_ALPHABET:
+			return flickAlphabetChangeMap[line][row];
+		  case DefaultSoftKeyboard.KEYMODE_JA_FULL_ALPHABET:
+		  default:
+			return flickAlphabetChangeMap[line][row];
+		}
+	}
+	/*********************************
+	 *
+	 */
+	@Override
+	public int GetCycleTableColumns() {
+		return 10;
 	}
 
 
@@ -321,7 +341,7 @@ public class SetupKeyboardBell extends SetupKeyboard {
 	/**
 	 * change map
 	 */
-	private static final int flickChangeMap[][] = {
+	private static final int flickHiraganaChangeMap[][] = {
 		{  0,  4,  1,  2,  3 }, // A
 		{  0,  4,  1,  2,  3 }, // Ka
 		{  0,  4,  1,  2,  3 }, // Sa
@@ -334,6 +354,21 @@ public class SetupKeyboardBell extends SetupKeyboard {
 		{  0, -1,  1,  2,  4 }, // Wa
 		{ -1, -1, -1, -1, -1 }, // Sharp
 		{ -1, -1,  1,  2,  3 }, // Aster
+	};
+
+	private static final int flickAlphabetChangeMap[][] = {
+		{  0,  7,  4,  1,  5 }, // .1/@:
+		{  0,  6,  1,  2,  7 }, // A2BC"
+		{  0,  6,  1,  2,  7 }, // D3EF'
+		{  0,  6,  1,  2,  7 }, // G4HI<
+		{  0,  6,  1,  2,  7 }, // J5KL&
+		{  0,  6,  1,  2,  7 }, // M6NO>
+		{  0,  8,  1,  2,  3 }, // P7QRS
+		{  0,  6,  1,  2,  7 }, // T8UV$
+		{  0,  8,  1,  2,  3 }, // W9XYZ
+		{  0, -1,  2,  1,  3 }, // - (0)
+		{  0, -1,  1,  2,  3 }, // , .?!
+		{  0, -1,  1,  2,  3 }, // Aster
 	};
 
 	private static final int selectLandKeyTable[] = {

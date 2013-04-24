@@ -1299,19 +1299,16 @@ public class DefaultSoftKeyboardToggle extends DefaultSoftKeyboardJAJP {
 	/**
 	 */
 	@Override public int convertModeFlick(final int prev, final int key) {
-		if (mCurrentKeyMode == KEYMODE_JA_FULL_HIRAGANA) {
+		switch (mCurrentKeyMode) {
+		  case KEYMODE_JA_FULL_HIRAGANA:
 			return flickHiraganaChangeMap[prev][key];
-		}
-		if (mCurrentKeyMode == KEYMODE_JA_FULL_KATAKANA) {
+		  case KEYMODE_JA_FULL_KATAKANA:
 			return flickHiraganaChangeMap[prev][key];
-		}
-		if (mCurrentKeyMode == KEYMODE_JA_HALF_KATAKANA) {
+		  case KEYMODE_JA_HALF_KATAKANA:
 			return flickHiraganaChangeMap[prev][key];
-		}
-		if (mCurrentKeyMode == KEYMODE_JA_HALF_ALPHABET) {
+		  case KEYMODE_JA_HALF_ALPHABET:
 			return flickAlphabetChangeMap[prev][key];
-		}
-		if (mCurrentKeyMode == KEYMODE_JA_FULL_ALPHABET) {
+		  case KEYMODE_JA_FULL_ALPHABET:
 			return flickAlphabetChangeMap[prev][key];
 		}
 		return -1;

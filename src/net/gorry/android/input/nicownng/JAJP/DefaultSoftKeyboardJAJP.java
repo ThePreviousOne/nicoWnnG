@@ -552,18 +552,23 @@ public abstract class DefaultSoftKeyboardJAJP extends DefaultSoftKeyboard {
 	@Override public int getTableIndex(final int keyCode) {
 		final int index =
 			(keyCode == KEYCODE_JP12_1)     ?  0 :
-				(keyCode == KEYCODE_JP12_2)     ?  1 :
-					(keyCode == KEYCODE_JP12_3)     ?  2 :
-						(keyCode == KEYCODE_JP12_4)     ?  3 :
-							(keyCode == KEYCODE_JP12_5)     ?  4 :
-								(keyCode == KEYCODE_JP12_6)     ?  5 :
-									(keyCode == KEYCODE_JP12_7)     ?  6 :
-										(keyCode == KEYCODE_JP12_8)     ?  7 :
-											(keyCode == KEYCODE_JP12_9)     ?  8 :
-												(keyCode == KEYCODE_JP12_0)     ?  9 :
-													(keyCode == KEYCODE_JP12_SHARP) ? 10 :
-														(keyCode == KEYCODE_JP12_ASTER) ? 11 :
-															0;
+			(keyCode == KEYCODE_JP12_2)     ?  1 :
+			(keyCode == KEYCODE_JP12_3)     ?  2 :
+			(keyCode == KEYCODE_JP12_4)     ?  3 :
+			(keyCode == KEYCODE_JP12_5)     ?  4 :
+			(keyCode == KEYCODE_JP12_6)     ?  5 :
+			(keyCode == KEYCODE_JP12_7)     ?  6 :
+			(keyCode == KEYCODE_JP12_8)     ?  7 :
+			(keyCode == KEYCODE_JP12_9)     ?  8 :
+			(keyCode == KEYCODE_JP12_0)     ?  9 :
+			(keyCode == KEYCODE_JP12_SHARP) ? 10 :
+			(keyCode == KEYCODE_JP12_ASTER) ? 11 :
+			(keyCode == KEYCODE_NEWKEY_0)   ? 10 :
+			(keyCode == KEYCODE_NEWKEY_1)   ? 11 :
+			(keyCode == KEYCODE_NEWKEY_2)   ? 12 :
+			(keyCode == KEYCODE_NEWKEY_3)   ? 13 :
+			(keyCode == KEYCODE_NEWKEY_4)   ? 14 :
+			0;
 
 		return index;
 	}
@@ -571,16 +576,16 @@ public abstract class DefaultSoftKeyboardJAJP extends DefaultSoftKeyboard {
 	protected int checkTableIndex(final int keyCode) {
 		final int index =
 			(keyCode == KEYCODE_JP12_1)     ?  0 :
-				(keyCode == KEYCODE_JP12_2)     ?  1 :
-					(keyCode == KEYCODE_JP12_3)     ?  2 :
-						(keyCode == KEYCODE_JP12_4)     ?  3 :
-							(keyCode == KEYCODE_JP12_5)     ?  4 :
-								(keyCode == KEYCODE_JP12_6)     ?  5 :
-									(keyCode == KEYCODE_JP12_7)     ?  6 :
-										(keyCode == KEYCODE_JP12_8)     ?  7 :
-											(keyCode == KEYCODE_JP12_9)     ?  8 :
-												(keyCode == KEYCODE_JP12_0)     ?  9 :
-													-1;
+			(keyCode == KEYCODE_JP12_2)     ?  1 :
+			(keyCode == KEYCODE_JP12_3)     ?  2 :
+			(keyCode == KEYCODE_JP12_4)     ?  3 :
+			(keyCode == KEYCODE_JP12_5)     ?  4 :
+			(keyCode == KEYCODE_JP12_6)     ?  5 :
+			(keyCode == KEYCODE_JP12_7)     ?  6 :
+			(keyCode == KEYCODE_JP12_8)     ?  7 :
+			(keyCode == KEYCODE_JP12_9)     ?  8 :
+			(keyCode == KEYCODE_JP12_0)     ?  9 :
+			-1;
 		return index;
 	}
 

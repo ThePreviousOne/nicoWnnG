@@ -1,0 +1,1122 @@
+
+Discarded input sections
+
+ __x86.get_pc_thunk.bx
+                0x00000000        0x0 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+ .note.GNU-stack
+                0x00000000        0x0 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+ __x86.get_pc_thunk.bx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ .text          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ .data          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ .bss           0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ .text.__x86.get_pc_thunk.bx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ .note.GNU-stack
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ __x86.get_pc_thunk.bx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .text          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .data          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .bss           0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .text.__x86.get_pc_thunk.bx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .note.GNU-stack
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ __x86.get_pc_thunk.bx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ .text          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ .data          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ .bss           0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ .text.__x86.get_pc_thunk.bx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ .note.GNU-stack
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ __x86.get_pc_thunk.bx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ .text          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ .data          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ .bss           0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ .text.__x86.get_pc_thunk.bx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ .note.GNU-stack
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ __x86.get_pc_thunk.bx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ .text          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ .data          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ .bss           0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ .text.__x86.get_pc_thunk.bx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ .note.GNU-stack
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ __x86.get_pc_thunk.bx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ .text          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ .data          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ .bss           0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ .text.__x86.get_pc_thunk.bx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ .note.GNU-stack
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ __x86.get_pc_thunk.cx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+ .text          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+ .data          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+ .bss           0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+ .note.GNU-stack
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+ .text          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/necode.o
+ .data          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/necode.o
+ .bss           0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/necode.o
+ .note.GNU-stack
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/necode.o
+ .text          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+ .data          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+ .bss           0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+ .note.GNU-stack
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+ __x86.get_pc_thunk.bx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+ .text          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+ .data          0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+ .bss           0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+ .text.__x86.get_pc_thunk.bx
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+ .note.GNU-stack
+                0x00000000        0x0 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+ .text          0x00000000        0x0 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtend_so.o
+ .data          0x00000000        0x0 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtend_so.o
+ .bss           0x00000000        0x0 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtend_so.o
+ .note.GNU-stack
+                0x00000000        0x0 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtend_so.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+LOAD ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+LOAD ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+LOAD ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+LOAD ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+LOAD ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+LOAD ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+LOAD ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+LOAD ./obj/local/x86/objs/nicownngdict/engine/necode.o
+LOAD ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+LOAD ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+LOAD /home/gerry/android-ndk-r8e/toolchains/x86-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/i686-linux-android/4.4.3/libgcc.a
+LOAD /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libstdc++.so
+LOAD /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libm.so
+LOAD /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libc.so
+LOAD /home/gerry/android-ndk-r8e/toolchains/x86-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/i686-linux-android/4.4.3/libgcc.a
+LOAD /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libc.so
+LOAD /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libdl.so
+LOAD /home/gerry/android-ndk-r8e/toolchains/x86-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/i686-linux-android/4.4.3/libgcc.a
+LOAD /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtend_so.o
+                0x000000f4                . = (0x0 + SIZEOF_HEADERS)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash           0x000000f4      0x288
+ *(.hash)
+ .hash          0x000000f4      0x288 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym         0x0000037c      0x5d0
+ *(.dynsym)
+ .dynsym        0x0000037c      0x5d0 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+
+.dynstr         0x0000094c      0xd23
+ *(.dynstr)
+ .dynstr        0x0000094c      0xd23 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+
+.gnu.version    0x00001670        0x0 load address 0x0000166f
+ *(.gnu.version)
+ .gnu.version   0x00000000        0x0 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+
+.gnu.version_d  0x00001670        0x0 load address 0x0000166f
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x00000000        0x0 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+
+.gnu.version_r  0x00001670        0x0 load address 0x0000166f
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x00000000        0x0 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+
+.rel.dyn        0x00001670       0xa8
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ .rel.data.rel.ro.local
+                0x00001670       0x78 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ .rel.data      0x000016e8        0x8 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x000016f0       0x18 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.init_array
+                0x00001708        0x8 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+ .rel.fini_array
+                0x00001710        0x8 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+
+.rela.dyn
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt        0x00001718       0x88
+ *(.rel.plt)
+ .rel.plt       0x00001718       0x88 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt            0x000017a0      0x120
+ *(.plt)
+ .plt           0x000017a0      0x120 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+
+.text           0x000018c0     0xca51
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x000018c0       0xf1 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+                0x000019a0                __stack_chk_fail_local
+                0x00001960                atexit
+ .text.__x86.get_pc_thunk.bx
+                0x000019b1        0xc /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+                0x000019b1                __x86.get_pc_thunk.bx
+ *fill*         0x000019bd        0x3 90909090
+ .text.clearDictionaryStructure
+                0x000019c0       0x17 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ *fill*         0x000019d7        0x9 90909090
+ .text.convertUTFCharToNjChar
+                0x000019e0       0x1d ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ *fill*         0x000019fd        0x3 90909090
+ .text.convertStringToNjChar
+                0x00001a00      0x2b8 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ *fill*         0x00001cb8        0x8 90909090
+ .text.convertNjCharToString
+                0x00001cc0      0x269 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ *fill*         0x00001f29        0x7 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setDictionaryParameter
+                0x00001f30       0xd7 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00001f30                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setDictionaryParameter
+ *fill*         0x00002007        0x9 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getFrequency
+                0x00002010       0x33 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00002010                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getFrequency
+ *fill*         0x00002043        0xd 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setApproxPattern__JLjava_lang_String_2Ljava_lang_String_2
+                0x00002050      0x179 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00002050                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setApproxPattern__JLjava_lang_String_2Ljava_lang_String_2
+ *fill*         0x000021c9        0x7 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setApproxPattern__JI
+                0x000021d0      0x148 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x000021d0                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setApproxPattern__JI
+ *fill*         0x00002318        0x8 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getLeftPartOfSpeech
+                0x00002320       0x2f ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00002320                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getLeftPartOfSpeech
+ *fill*         0x0000234f        0x1 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getRightPartOfSpeech
+                0x00002350       0x2f ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00002350                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getRightPartOfSpeech
+ *fill*         0x0000237f        0x1 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setStroke
+                0x00002380       0x8d ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00002380                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setStroke
+ *fill*         0x0000240d        0x3 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setCandidate
+                0x00002410       0x8d ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00002410                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setCandidate
+ *fill*         0x0000249d        0x3 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_moveOldDicFile
+                0x000024a0       0xdb ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x000024a0                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_moveOldDicFile
+ *fill*         0x0000257b        0x5 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setDicFilePermission600
+                0x00002580       0x99 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00002580                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setDicFilePermission600
+ *fill*         0x00002619        0x7 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_createQueryStringBase
+                0x00002620      0x2ed ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00002620                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_createQueryStringBase
+ *fill*         0x0000290d        0x3 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_createBindArray
+                0x00002910      0x42c ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00002910                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_createBindArray
+ *fill*         0x00002d3c        0x4 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getApproxPattern
+                0x00002d40      0x1d2 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00002d40                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getApproxPattern
+ *fill*         0x00002f12        0xe 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getNumberOfRightPOS
+                0x00002f20       0x66 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00002f20                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getNumberOfRightPOS
+ *fill*         0x00002f86        0xa 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getNumberOfLeftPOS
+                0x00002f90       0x66 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00002f90                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getNumberOfLeftPOS
+ *fill*         0x00002ff6        0xa 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setRightPartOfSpeech
+                0x00003000       0xb2 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00003000                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setRightPartOfSpeech
+ *fill*         0x000030b2        0xe 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setLeftPartOfSpeech
+                0x000030c0       0xb2 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x000030c0                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setLeftPartOfSpeech
+ *fill*         0x00003172        0xe 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getConnectArray
+                0x00003180      0x181 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00003180                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getConnectArray
+ *fill*         0x00003301        0xf 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getRightPartOfSpeechSpecifiedType
+                0x00003310       0xc7 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00003310                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getRightPartOfSpeechSpecifiedType
+ *fill*         0x000033d7        0x9 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getLeftPartOfSpeechSpecifiedType
+                0x000033e0       0xc2 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x000033e0                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getLeftPartOfSpeechSpecifiedType
+ *fill*         0x000034a2        0xe 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_selectWord
+                0x000034b0       0x76 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x000034b0                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_selectWord
+ *fill*         0x00003526        0xa 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_clearResult
+                0x00003530       0x92 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00003530                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_clearResult
+ *fill*         0x000035c2        0xe 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_clearApproxPatterns
+                0x000035d0       0x7c ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x000035d0                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_clearApproxPatterns
+ *fill*         0x0000364c        0x4 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_clearDictionaryParameters
+                0x00003650       0x78 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00003650                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_clearDictionaryParameters
+ *fill*         0x000036c8        0x8 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getCandidate
+                0x000036d0       0xef ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x000036d0                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getCandidate
+ *fill*         0x000037bf        0x1 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getStroke
+                0x000037c0       0xef ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x000037c0                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getStroke
+ *fill*         0x000038af        0x1 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getNextWord
+                0x000038b0       0xf0 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x000038b0                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getNextWord
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_searchWord
+                0x000039a0      0x1bc ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x000039a0                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_searchWord
+ *fill*         0x00003b5c        0x4 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_freeWnnWork
+                0x00003b60       0x56 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00003b60                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_freeWnnWork
+ *fill*         0x00003bb6        0xa 90909090
+ .text.Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_createWnnWork
+                0x00003bc0      0x1ed ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                0x00003bc0                Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_createWnnWork
+ *fill*         0x00003dad        0x3 90909090
+ .text.set_operation_id
+                0x00003db0       0x5e ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ *fill*         0x00003e0e        0x2 90909090
+ .text.njd_init_search_location_set
+                0x00003e10       0x47 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                0x00003e10                njd_init_search_location_set
+ *fill*         0x00003e57        0x9 90909090
+ .text.njd_init_word
+                0x00003e60       0x60 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                0x00003e60                njd_init_word
+ .text.njx_check_dic
+                0x00003ec0      0x332 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                0x00003ec0                njx_check_dic
+ *fill*         0x000041f2        0xe 90909090
+ .text.njd_get_candidate
+                0x00004200       0xf8 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                0x00004200                njd_get_candidate
+ *fill*         0x000042f8        0x8 90909090
+ .text.njd_get_stroke
+                0x00004300      0x158 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                0x00004300                njd_get_stroke
+ *fill*         0x00004458        0x8 90909090
+ .text.njd_get_word_data
+                0x00004460       0xd5 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                0x00004460                njd_get_word_data
+ *fill*         0x00004535        0xb 90909090
+ .text.njx_get_word
+                0x00004540      0x8b8 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                0x00004540                njx_get_word
+ *fill*         0x00004df8        0x8 90909090
+ .text.njx_search_word
+                0x00004e00      0x681 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                0x00004e00                njx_search_word
+ *fill*         0x00005481        0xf 90909090
+ .text.njx_get_stroke
+                0x00005490       0x87 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+                0x00005490                njx_get_stroke
+ *fill*         0x00005517        0x9 90909090
+ .text.njx_get_candidate
+                0x00005520       0x87 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+                0x00005520                njx_get_candidate
+ *fill*         0x000055a7        0x9 90909090
+ .text.set_previous_selection
+                0x000055b0      0x160 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ .text.njx_init
+                0x00005710       0x21 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+                0x00005710                njx_init
+ *fill*         0x00005731        0xf 90909090
+ .text.njx_select
+                0x00005740       0x55 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+                0x00005740                njx_select
+ *fill*         0x00005795        0xb 90909090
+ .text.get_stem_hindo
+                0x000057a0       0x7f ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ *fill*         0x0000581f        0x1 90909090
+ .text.get_stem_next
+                0x00005820      0x106 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ *fill*         0x00005926        0xa 90909090
+ .text.get_stem_yomi_data
+                0x00005930      0x10c ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ *fill*         0x00005a3c        0x4 90909090
+ .text.search_node
+                0x00005a40      0x984 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ *fill*         0x000063c4        0xc 90909090
+ .text.bdic_search_data
+                0x000063d0      0x161 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ *fill*         0x00006531        0xf 90909090
+ .text.bdic_search_fore_data
+                0x00006540      0x324 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ *fill*         0x00006864        0xc 90909090
+ .text.njd_b_get_word
+                0x00006870      0x6d1 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                0x00006870                njd_b_get_word
+ *fill*         0x00006f41        0xf 90909090
+ .text.search_yomi_node
+                0x00006f50      0x5dd ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ *fill*         0x0000752d        0x3 90909090
+ .text.get_node_bottom
+                0x00007530      0x203 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ *fill*         0x00007733        0xd 90909090
+ .text.bdic_get_next_data
+                0x00007740      0x242 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ *fill*         0x00007982        0xe 90909090
+ .text.bdic_search_fore_data2
+                0x00007990      0x920 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ .text.get_stem_yomi_string
+                0x000082b0      0x14c ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ *fill*         0x000083fc        0x4 90909090
+ .text.njd_b_get_stroke
+                0x00008400      0x101 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                0x00008400                njd_b_get_stroke
+ *fill*         0x00008501        0xf 90909090
+ .text.njd_b_get_candidate
+                0x00008510      0x308 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                0x00008510                njd_b_get_candidate
+ *fill*         0x00008818        0x8 90909090
+ .text.search_node2
+                0x00008820      0xe3c ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ *fill*         0x0000965c        0x4 90909090
+ .text.njd_b_search_word
+                0x00009660      0x244 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                0x00009660                njd_b_search_word
+ *fill*         0x000098a4        0xc 90909090
+ .text.convert_to_yomi
+                0x000098b0       0xf7 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ *fill*         0x000099a7        0x9 90909090
+ .text.njd_f_get_stroke
+                0x000099b0      0x12b ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+                0x000099b0                njd_f_get_stroke
+ *fill*         0x00009adb        0x5 90909090
+ .text.njd_f_get_word
+                0x00009ae0      0x1e4 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+                0x00009ae0                njd_f_get_word
+ *fill*         0x00009cc4        0xc 90909090
+ .text.njd_f_get_candidate
+                0x00009cd0      0x262 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+                0x00009cd0                njd_f_get_candidate
+ *fill*         0x00009f32        0xe 90909090
+ .text.njd_f_search_word
+                0x00009f40      0x3c5 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+                0x00009f40                njd_f_search_word
+ *fill*         0x0000a305        0xb 90909090
+ .text.get_search_index_address
+                0x0000a310       0x22 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000a332        0xe 90909090
+ .text.get_que_type_and_next
+                0x0000a340       0x86 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000a3c6        0xa 90909090
+ .text.get_que_allHinsi
+                0x0000a3d0       0xae ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000a47e        0x2 90909090
+ .text.get_que  0x0000a480       0xe9 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000a569        0x7 90909090
+ .text.is_continued
+                0x0000a570       0xe2 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000a652        0xe 90909090
+ .text.continue_cnt
+                0x0000a660       0xdc ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000a73c        0x4 90909090
+ .text.search_next_que
+                0x0000a740       0x94 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000a7d4        0xc 90909090
+ .text.get_string
+                0x0000a7e0      0x252 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000aa32        0xe 90909090
+ .text.str_que_cmp
+                0x0000aa40      0x1cb ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000ac0b        0x5 90909090
+ .text.njd_l_get_word
+                0x0000ac10      0x13e ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                0x0000ac10                njd_l_get_word
+ *fill*         0x0000ad4e        0x2 90909090
+ .text.get_hyouki
+                0x0000ad50      0x407 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000b157        0x9 90909090
+ .text.njd_l_check_dic
+                0x0000b160      0x2a6 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                0x0000b160                njd_l_check_dic
+ *fill*         0x0000b406        0xa 90909090
+ .text.njd_l_get_candidate
+                0x0000b410       0x89 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                0x0000b410                njd_l_get_candidate
+ *fill*         0x0000b499        0x7 90909090
+ .text.njd_l_get_stroke
+                0x0000b4a0       0x97 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                0x0000b4a0                njd_l_get_stroke
+ *fill*         0x0000b537        0x9 90909090
+ .text.search_range_by_yomi
+                0x0000b540      0x4dc ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000ba1c        0x4 90909090
+ .text.search_range_by_yomi2
+                0x0000ba20      0x2e2 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000bd02        0xe 90909090
+ .text.que_strcmp_complete_with_hyouki
+                0x0000bd10      0x203 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000bf13        0xd 90909090
+ .text.get_hindo
+                0x0000bf20      0x146 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000c066        0xa 90909090
+ .text.get_cand_by_evaluate2
+                0x0000c070      0xc35 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000cca5        0xb 90909090
+ .text.get_cand_by_evaluate
+                0x0000ccb0      0x741 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000d3f1        0xf 90909090
+ .text.get_cand_by_sequential
+                0x0000d400      0x472 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000d872        0xe 90909090
+ .text.njd_l_search_word
+                0x0000d880      0x254 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                0x0000d880                njd_l_search_word
+ *fill*         0x0000dad4        0xc 90909090
+ .text.njd_r_get_hinsi
+                0x0000dae0      0x11e ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+                0x0000dae0                njd_r_get_hinsi
+ *fill*         0x0000dbfe        0x2 90909090
+ .text.njd_r_get_connect
+                0x0000dc00       0xab ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+                0x0000dc00                njd_r_get_connect
+ *fill*         0x0000dcab        0x5 90909090
+ .text.njd_r_get_count
+                0x0000dcb0       0x33 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+                0x0000dcb0                njd_r_get_count
+ .text.__x86.get_pc_thunk.cx
+                0x0000dce3        0xc ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+                0x0000dce3                __x86.get_pc_thunk.cx
+ *fill*         0x0000dcef        0x1 90909090
+ .text.nje_convert_hira_to_kata
+                0x0000dcf0       0xa5 ./obj/local/x86/objs/nicownngdict/engine/necode.o
+                0x0000dcf0                nje_convert_hira_to_kata
+ *fill*         0x0000dd95        0xb 90909090
+ .text.njd_connect_test
+                0x0000dda0       0xbc ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+                0x0000dda0                njd_connect_test
+ *fill*         0x0000de5c        0x4 90909090
+ .text.nj_strcpy
+                0x0000de60       0x34 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                0x0000de60                nj_strcpy
+ *fill*         0x0000de94        0xc 90909090
+ .text.nj_strncpy
+                0x0000dea0       0x72 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                0x0000dea0                nj_strncpy
+ *fill*         0x0000df12        0xe 90909090
+ .text.nj_strlen
+                0x0000df20       0x1d ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                0x0000df20                nj_strlen
+ *fill*         0x0000df3d        0x3 90909090
+ .text.nj_strcmp
+                0x0000df40       0x67 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                0x0000df40                nj_strcmp
+ *fill*         0x0000dfa7        0x9 90909090
+ .text.nj_strncmp
+                0x0000dfb0       0x7d ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                0x0000dfb0                nj_strncmp
+ *fill*         0x0000e02d        0x3 90909090
+ .text.nj_charlen
+                0x0000e030       0xa3 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                0x0000e030                nj_charlen
+ *fill*         0x0000e0d3        0xd 90909090
+ .text.nj_charncmp
+                0x0000e0e0      0x114 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                0x0000e0e0                nj_charncmp
+ *fill*         0x0000e1f4        0xc 90909090
+ .text.nj_charncpy
+                0x0000e200       0xd5 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                0x0000e200                nj_charncpy
+ *fill*         0x0000e2d5        0xb 90909090
+ .text.nj_memcpy
+                0x0000e2e0       0x31 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                0x0000e2e0                nj_memcpy
+ *(.gnu.warning)
+
+.fini
+ *(.fini)
+                0x0000e311                PROVIDE (__etext, .)
+                0x0000e311                PROVIDE (_etext, .)
+                0x0000e311                PROVIDE (etext, .)
+
+.rodata         0x0000e314      0x4af
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.1
+                0x0000e314       0x59 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                                 0x5a (size before relaxing)
+ *fill*         0x0000e36d        0x3 00
+ .rodata        0x0000e370      0x361 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ *fill*         0x0000e6d1        0x3 00
+ .rodata.str1.4
+                0x0000e6d4       0x98 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                                 0x97 (size before relaxing)
+ .rodata        0x0000e76c        0x8 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .rodata.str1.1
+                0x0000e774        0x3 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .rodata        0x0000e777        0x3 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ .rodata.str1.1
+                0x00000000        0x3 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ *fill*         0x0000e77a        0x2 00
+ .rodata        0x0000e77c       0x44 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+ .rodata        0x0000e7c0        0x3 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+ .rodata.str1.1
+                0x00000000        0x3 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr   0x0000e7c4      0x354
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x0000e7c4      0x354 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+
+.eh_frame       0x0000eb18     0x1618
+ *(.eh_frame)
+ .eh_frame      0x0000eb18        0x0 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+ .eh_frame      0x0000eb18      0x5b0 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ .eh_frame      0x0000f0c8      0x138 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                                0x150 (size before relaxing)
+ .eh_frame      0x0000f200       0xcc ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+                                 0xe4 (size before relaxing)
+ .eh_frame      0x0000f2cc      0x488 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                                0x4a0 (size before relaxing)
+ .eh_frame      0x0000f754      0x160 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+                                0x178 (size before relaxing)
+ .eh_frame      0x0000f8b4      0x594 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                0x5ac (size before relaxing)
+ .eh_frame      0x0000fe48       0x54 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+                                 0x6c (size before relaxing)
+ .eh_frame      0x0000fe9c       0x48 ./obj/local/x86/objs/nicownngdict/engine/necode.o
+                                 0x60 (size before relaxing)
+ .eh_frame      0x0000fee4       0x24 ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+                                 0x3c (size before relaxing)
+ .eh_frame      0x0000ff08      0x224 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                                0x23c (size before relaxing)
+ .eh_frame      0x0001012c        0x4 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtend_so.o
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x00010130                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
+                0x00011e48                . = (0x1000 DATA_SEGMENT_ALIGN 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array     0x00011e48        0xc
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x00011e48        0x8 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+                0x00011e48                __INIT_ARRAY__
+ .init_array    0x00011e50        0x4 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtend_so.o
+
+.fini_array     0x00011e54        0xc
+ *(.fini_array)
+ .fini_array    0x00011e54        0x8 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+                0x00011e54                __FINI_ARRAY__
+ .fini_array    0x00011e5c        0x4 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtend_so.o
+ *(SORT(.fini_array.*))
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro    0x00011e60       0x54
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ .data.rel.ro.local
+                0x00011e60       0x54 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic        0x00011eb4       0xf0
+ *(.dynamic)
+ .dynamic       0x00011eb4       0xf0 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+                0x00011eb4                _DYNAMIC
+
+.got            0x00011fa4       0x5c
+ *(.got.plt)
+ .got.plt       0x00011fa4       0x50 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+                0x00011fa4                _GLOBAL_OFFSET_TABLE_
+ *(.got)
+ .got           0x00011ff4        0xc /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+                0x00012000                . = (. DATA_SEGMENT_RELRO_END 0x0)
+
+.data           0x00012000        0x4
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00012000        0x4 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+                0x00012000                __dso_handle
+
+.data1
+ *(.data1)
+                0x00012004                _edata = .
+                0x00012004                PROVIDE (edata, .)
+                0x00012004                __bss_start = .
+
+.bss            0x00012004       0x1c
+ *(.dynbss)
+ .dynbss        0x00000000        0x0 /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00012004       0x1c /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+ *(COMMON)
+                0x00012020                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x00012020                . = ALIGN (0x4)
+                0x00012020                . = ALIGN (0x4)
+                0x00012020                _end = .
+                0x00012020                PROVIDE (end, .)
+                0x00012020                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0xb4
+ *(.comment)
+ .comment       0x00000000       0x12 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ .comment       0x00000012       0x12 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .comment       0x00000024       0x12 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ .comment       0x00000036       0x12 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ .comment       0x00000048       0x12 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ .comment       0x0000005a       0x12 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ .comment       0x0000006c       0x12 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+ .comment       0x0000007e       0x12 ./obj/local/x86/objs/nicownngdict/engine/necode.o
+ .comment       0x00000090       0x12 ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+ .comment       0x000000a2       0x12 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x438
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000      0x128 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ .debug_aranges
+                0x00000128       0x60 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .debug_aranges
+                0x00000188       0x40 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ .debug_aranges
+                0x000001c8       0x98 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ .debug_aranges
+                0x00000260       0x40 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ .debug_aranges
+                0x000002a0       0xc8 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ .debug_aranges
+                0x00000368       0x30 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+ .debug_aranges
+                0x00000398       0x20 ./obj/local/x86/objs/nicownngdict/engine/necode.o
+ .debug_aranges
+                0x000003b8       0x20 ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+ .debug_aranges
+                0x000003d8       0x60 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+
+.debug_pubnames
+                0x00000000      0xdc8
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0xa2d ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ .debug_pubnames
+                0x00000a2d       0xbb ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .debug_pubnames
+                0x00000ae8       0x57 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ .debug_pubnames
+                0x00000b3f       0x68 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ .debug_pubnames
+                0x00000ba7       0x68 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ .debug_pubnames
+                0x00000c0f       0x7c ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ .debug_pubnames
+                0x00000c8b       0x50 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+ .debug_pubnames
+                0x00000cdb       0x2f ./obj/local/x86/objs/nicownngdict/engine/necode.o
+ .debug_pubnames
+                0x00000d0a       0x27 ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+ .debug_pubnames
+                0x00000d31       0x97 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+
+.debug_info     0x00000000     0xb64e
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000     0x4dde ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ .debug_info    0x00004dde     0x10ac ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .debug_info    0x00005e8a      0x889 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ .debug_info    0x00006713     0x1cf4 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ .debug_info    0x00008407      0xa37 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ .debug_info    0x00008e3e     0x1e42 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ .debug_info    0x0000ac80      0x186 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+ .debug_info    0x0000ae06       0xe2 ./obj/local/x86/objs/nicownngdict/engine/necode.o
+ .debug_info    0x0000aee8      0x442 ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+ .debug_info    0x0000b32a      0x324 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+
+.debug_abbrev   0x00000000     0x11c0
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x34e ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ .debug_abbrev  0x0000034e      0x250 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .debug_abbrev  0x0000059e      0x1bb ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ .debug_abbrev  0x00000759      0x2c0 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ .debug_abbrev  0x00000a19      0x250 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ .debug_abbrev  0x00000c69      0x287 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ .debug_abbrev  0x00000ef0       0xaa ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+ .debug_abbrev  0x00000f9a       0x93 ./obj/local/x86/objs/nicownngdict/engine/necode.o
+ .debug_abbrev  0x0000102d       0xc1 ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+ .debug_abbrev  0x000010ee       0xd2 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+
+.debug_line     0x00000000     0x2d1e
+ *(.debug_line)
+ .debug_line    0x00000000      0x96c ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ .debug_line    0x0000096c      0x473 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .debug_line    0x00000ddf      0x14c ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ .debug_line    0x00000f2b      0xc75 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ .debug_line    0x00001ba0      0x23c ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ .debug_line    0x00001ddc      0xb5d ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ .debug_line    0x00002939       0xd3 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+ .debug_line    0x00002a0c       0xab ./obj/local/x86/objs/nicownngdict/engine/necode.o
+ .debug_line    0x00002ab7       0xa5 ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+ .debug_line    0x00002b5c      0x1c2 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x00000000     0x323e
+ *(.debug_str)
+ .debug_str     0x00000000     0x2522 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+                               0x2661 (size before relaxing)
+ .debug_str     0x00002522      0x211 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                                0x6ac (size before relaxing)
+ .debug_str     0x00002733       0xa1 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+                                0x426 (size before relaxing)
+ .debug_str     0x000027d4      0x48a ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                                0x79f (size before relaxing)
+ .debug_str     0x00002c5e       0xb8 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+                                0x3cf (size before relaxing)
+ .debug_str     0x00002d16      0x3ad ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                0x897 (size before relaxing)
+ .debug_str     0x000030c3       0x6b ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+                                0x12f (size before relaxing)
+ .debug_str     0x0000312e       0x44 ./obj/local/x86/objs/nicownngdict/engine/necode.o
+                                 0xe9 (size before relaxing)
+ .debug_str     0x00003172       0x46 ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+                                0x260 (size before relaxing)
+ .debug_str     0x000031b8       0x86 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                                0x130 (size before relaxing)
+
+.debug_loc      0x00000000     0xb0f7
+ *(.debug_loc)
+ .debug_loc     0x00000000     0x21d0 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ .debug_loc     0x000021d0      0xc47 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .debug_loc     0x00002e17      0x4e4 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ .debug_loc     0x000032fb     0x2c1c ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ .debug_loc     0x00005f17      0x897 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ .debug_loc     0x000067ae     0x39a4 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ .debug_loc     0x0000a152      0x2f6 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+ .debug_loc     0x0000a448      0x17c ./obj/local/x86/objs/nicownngdict/engine/necode.o
+ .debug_loc     0x0000a5c4       0xda ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+ .debug_loc     0x0000a69e      0xa59 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0xad0
+ *(.debug_ranges)
+ .debug_ranges  0x00000000      0x480 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+ .debug_ranges  0x00000480      0x180 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+ .debug_ranges  0x00000600       0x60 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+ .debug_ranges  0x00000660      0x168 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+ .debug_ranges  0x000007c8       0xb0 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+ .debug_ranges  0x00000878      0x1c8 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+ .debug_ranges  0x00000a40       0x20 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+ .debug_ranges  0x00000a60       0x10 ./obj/local/x86/objs/nicownngdict/engine/necode.o
+ .debug_ranges  0x00000a70       0x10 ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+ .debug_ranges  0x00000a80       0x50 ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+OUTPUT(./obj/local/x86/libnicownngdict.so elf32-i386)
+
+Cross Reference Table
+
+Symbol                                            File
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_clearApproxPatterns ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_clearDictionaryParameters ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_clearResult ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_createBindArray ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_createQueryStringBase ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_createWnnWork ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_freeWnnWork ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getApproxPattern ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getCandidate ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getConnectArray ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getFrequency ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getLeftPartOfSpeech ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getLeftPartOfSpeechSpecifiedType ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getNextWord ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getNumberOfLeftPOS ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getNumberOfRightPOS ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getRightPartOfSpeech ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getRightPartOfSpeechSpecifiedType ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_getStroke ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_moveOldDicFile ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_searchWord ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_selectWord ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setApproxPattern(__complex int0_t) ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setApproxPattern__JLjava_lang_String_2Ljava_lang_String_2 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setCandidate ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setDicFilePermission600 ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setDictionaryParameter ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setLeftPartOfSpeech ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setRightPartOfSpeech ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+Java_net_gorry_android_input_nicownng_OpenWnnDictionaryImplJni_setStroke ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+_DYNAMIC                                          /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+_GLOBAL_OFFSET_TABLE_                             /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+__FINI_ARRAY__                                    /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+__INIT_ARRAY__                                    /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+__bss_start                                       /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libstdc++.so
+                                                  /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libdl.so
+                                                  /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libc.so
+                                                  /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libm.so
+__deregister_frame_info_bases                     /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+__dso_handle                                      /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+__register_frame_info_bases                       /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+__stack_chk_fail_local                            /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+__x86.get_pc_thunk.bx                             /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+__x86.get_pc_thunk.cx                             ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+_edata                                            /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libstdc++.so
+                                                  /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libdl.so
+                                                  /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libc.so
+                                                  /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libm.so
+_end                                              /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libstdc++.so
+                                                  /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libdl.so
+                                                  /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libc.so
+                                                  /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/libm.so
+atexit                                            /home/gerry/android-ndk-r8e/platforms/android-9/arch-x86/usr/lib/crtbegin_so.o
+nj_charlen                                        ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+nj_charncmp                                       ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+nj_charncpy                                       ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+nj_memcpy                                         ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+nj_strcmp                                         ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+nj_strcpy                                         ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+nj_strlen                                         ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+nj_strncmp                                        ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+nj_strncpy                                        ./obj/local/x86/objs/nicownngdict/engine/nj_str.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_b_get_candidate                               ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_b_get_stroke                                  ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_b_get_word                                    ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_b_search_word                                 ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_connect_test                                  ./obj/local/x86/objs/nicownngdict/engine/ndcommon.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+njd_f_get_candidate                               ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_f_get_stroke                                  ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_f_get_word                                    ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_f_search_word                                 ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_get_candidate                                 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+njd_get_stroke                                    ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+njd_get_word_data                                 ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_init_search_location_set                      ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_init_word                                     ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_l_check_dic                                   ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_l_get_candidate                               ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_l_get_stroke                                  ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_l_get_word                                    ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_l_search_word                                 ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njd_r_get_connect                                 ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+njd_r_get_count                                   ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+njd_r_get_hinsi                                   ./obj/local/x86/objs/nicownngdict/engine/ndrdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+nje_convert_hira_to_kata                          ./obj/local/x86/objs/nicownngdict/engine/necode.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndldic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndfdic.o
+                                                  ./obj/local/x86/objs/nicownngdict/engine/ndbdic.o
+njx_check_dic                                     ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+njx_get_candidate                                 ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+njx_get_stroke                                    ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+njx_get_word                                      ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+njx_init                                          ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+njx_search_word                                   ./obj/local/x86/objs/nicownngdict/engine/ndapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o
+njx_select                                        ./obj/local/x86/objs/nicownngdict/engine/neapi.o
+                                                  ./obj/local/x86/objs/nicownngdict/OpenWnnDictionaryImplJni.o

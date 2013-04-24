@@ -8,9 +8,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
 import android.webkit.WebView;
@@ -20,6 +22,14 @@ import android.os.Build;
 public class NicoWnnGMain extends Activity {
 	@Override public void onCreate(final Bundle saveInstanceState) {
 		super.onCreate(saveInstanceState);
+
+        // Log.e("NicoWnnG", "開始");
+		ApplicationInfo appInfo = getApplicationInfo();
+        int maskByDebuggable = appInfo.flags & ApplicationInfo.FLAG_DEBUGGABLE;
+        boolean isDebug = maskByDebuggable == ApplicationInfo.FLAG_DEBUGGABLE;
+        if (isDebug) {
+            Log.e("NicoWnnG", "デバッグログテスト");
+        }
 
 		SymbolList.copyUserSymbolDicFileToExternalStorageDirectory(this, false);
 

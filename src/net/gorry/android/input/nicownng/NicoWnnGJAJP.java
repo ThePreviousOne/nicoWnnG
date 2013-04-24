@@ -1073,6 +1073,9 @@ public class NicoWnnGJAJP extends NicoWnnG {
 				if (!((ev.mode == ENGINE_MODE_SYMBOL) || (ev.mode == ENGINE_MODE_USERSYMBOL) || (ev.mode == ENGINE_MODE_DOCOMOSYMBOL) || (ev.mode == ENGINE_MODE_EISU_KANA))) {
 					initializeScreen();
 				}
+				if ((ev.mode == ENGINE_MODE_OPT_TYPE_QWERTY) || (ev.mode == ENGINE_MODE_OPT_TYPE_12KEY)) {
+					reloadSymbol();
+				}
 				return true;
 
 			case NicoWnnGEvent.UPDATE_CANDIDATE:

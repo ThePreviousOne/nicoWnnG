@@ -14,8 +14,9 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-<Keyboard xmlns:android="http://schemas.android.com/apk/res/android" android:keyWidth="16.667%" android:horizontalGap="0dip" android:verticalGap="0dip" android:keyHeight="@dimen/key_height_0">
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android" android:keyWidth="14.1%" android:horizontalGap="0dip" android:verticalGap="0dip" android:keyHeight="@dimen/key_height_0">
 	<Row>
+		<Key android:codes="-121" android:keyIcon="@drawable/key_qwerty_shift" android:iconPreview="@drawable/key_qwerty_shift_b" android:isModifier="true" android:isSticky="true" android:keyEdgeFlags="left" />
 		<Key android:codes="-201" android:keyIcon="@drawable/key_12key_flick_hiragana1" android:iconPreview="@drawable/key_12key_flick_hiragana1_b" />
 		<Key android:codes="-202" android:keyIcon="@drawable/key_12key_flick_hiragana2" android:iconPreview="@drawable/key_12key_flick_hiragana2_b" />
 		<Key android:codes="-203" android:keyIcon="@drawable/key_12key_flick_hiragana3" android:iconPreview="@drawable/key_12key_flick_hiragana3_b" />
@@ -24,6 +25,7 @@
 		<Key android:codes="-214" android:keyIcon="@drawable/key_12key_del" android:iconPreview="@drawable/key_12key_del_b" android:isRepeatable="false" />
 	</Row>
 	<Row>
+		<Key android:codes="-1001" android:keyIcon="@drawable/key_12key_usersymbol" android:iconPreview="@drawable/key_12key_usersymbol_b" android:keyEdgeFlags="left" />
 		<Key android:codes="-206" android:keyIcon="@drawable/key_12key_flick_hiragana6" android:iconPreview="@drawable/key_12key_flick_hiragana6_b" />
 		<Key android:codes="-207" android:keyIcon="@drawable/key_12key_flick_hiragana7" android:iconPreview="@drawable/key_12key_flick_hiragana7_b" />
 		<Key android:codes="-208" android:keyIcon="@drawable/key_12key_flick_hiragana8" android:iconPreview="@drawable/key_12key_flick_hiragana8_b" />
@@ -32,6 +34,7 @@
 		<Key android:codes="-215" android:keyIcon="@drawable/key_12key_space_jp" android:iconPreview="@drawable/key_12key_space_jp_b" android:isRepeatable="false" />
 	</Row>
 	<Row>
+		<Key android:codes="-230" android:keyLabel="@string/key_12key_mode_nico2" android:popupKeyboard="@xml/keyboard_popup_12key_jp_0" android:isRepeatable="false" android:keyEdgeFlags="left" />
 		<Key android:codes="-222" android:keyIcon="@drawable/key_12key_sym_mushroom" android:iconPreview="@drawable/key_12key_sym_mushroom_b" />
 		<Key android:codes="-213" android:keyIcon="@drawable/key_12key_flick_hiragana_aster" android:iconPreview="@drawable/key_12key_flick_hiragana_aster_b" />
 		<Key android:codes="-218" android:keyIcon="@drawable/key_12key_left" android:iconPreview="@drawable/key_12key_left_b" android:isRepeatable="false" />

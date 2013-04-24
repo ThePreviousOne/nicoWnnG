@@ -67,8 +67,28 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 	/*********************************
 	 *
 	 */
-	public int GetFlickChangeMap(final int line, final int row) {
-		return flickChangeMap[line][row];
+	@Override
+	public int GetFlickChangeMap(final int keymode, final int line, final int row) {
+		switch (keymode) {
+		  case DefaultSoftKeyboard.KEYMODE_JA_FULL_NICO:
+			return flickHiraganaChangeMap[line][row];
+		  case DefaultSoftKeyboard.KEYMODE_JA_FULL_NICO_KATAKANA:
+			return flickHiraganaChangeMap[line][row];
+		  case DefaultSoftKeyboard.KEYMODE_JA_HALF_NICO_KATAKANA:
+			return flickHiraganaChangeMap[line][row];
+		  case DefaultSoftKeyboard.KEYMODE_JA_HALF_ALPHABET:
+			return flickAlphabetChangeMap[line][row];
+		  case DefaultSoftKeyboard.KEYMODE_JA_FULL_ALPHABET:
+		  default:
+			return flickAlphabetChangeMap[line][row];
+		}
+	}
+	/*********************************
+	 *
+	 */
+	@Override
+	public int GetCycleTableColumns() {
+		return 15;
 	}
 
 
@@ -309,7 +329,21 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 	/**
 	 * change map
 	 */
-	private static final int flickChangeMap[][] = {
+	private static final int flickHiraganaChangeMap[][] = {
+/*
+		{  0,  4,  1,  2,  3 }, // A
+		{  0,  4,  1,  2,  3 }, // Ka
+		{  0,  4,  1,  2,  3 }, // Sa
+		{  0,  4,  1,  2,  3 }, // Ta
+		{  0,  4,  1,  2,  3 }, // Na
+		{  0,  4,  1,  2,  3 }, // Ha
+		{  0,  4,  1,  2,  3 }, // Ma
+		{  0,  2, -1,  1, -1 }, // Ya
+		{  0,  4,  1,  2,  3 }, // Ra
+		{  0, -1,  1,  2,  5 }, // Wa
+		{ -1, -1, -1, -1, -1 }, // Sharp
+		{ -1, -1,  1,  2,  3 }, // Aster
+*/
 		{  0,  7,  1,  2,  6 }, // A
 		{  1,  8,  2,  3,  7 }, // Ka
 		{  2,  9,  3,  4,  8 }, // Sa
@@ -322,6 +356,21 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 		{  9, -1,  8,  7, 14 }, // Wa
 		{  0,  0,  0,  0,  0 }, // Sharp
 		{  0,  0,  0,  0,  0 }, // Aster
+	};
+
+	private static final int flickAlphabetChangeMap[][] = {
+		{  0,  7,  4,  1,  5 }, // .1/@:
+		{  0,  6,  1,  2,  7 }, // A2BC"
+		{  0,  6,  1,  2,  7 }, // D3EF'
+		{  0,  6,  1,  2,  7 }, // G4HI<
+		{  0,  6,  1,  2,  7 }, // J5KL&
+		{  0,  6,  1,  2,  7 }, // M6NO>
+		{  0,  8,  1,  2,  3 }, // P7QRS
+		{  0,  6,  1,  2,  7 }, // T8UV$
+		{  0,  8,  1,  2,  3 }, // W9XYZ
+		{  0, -1,  2,  1,  3 }, // - (0)
+		{  0, -1,  1,  2,  3 }, // , .?!
+		{  0, -1,  1,  2,  3 }, // Aster
 	};
 
 	private static final int selectLandKeyTable[] = {
@@ -793,7 +842,7 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 
 	private static final int selectFlickLandKeyTable[] = {
 		R.xml.key_nico2_flick_top_0,
-		R.xml.key_nico2_flick_top_0,
+		R.xml.key_nico2_flick_shift_0,
 		R.xml.key_nico2_a_0,
 		R.xml.key_nico2_k_0,
 		R.xml.key_nico2_s_0,
@@ -805,7 +854,7 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 		R.xml.key_nico2_r_0,
 		R.xml.key_nico2_w_0,
 		R.xml.key_nico2_flick_input_top_0,
-		R.xml.key_nico2_flick_input_top_0,
+		R.xml.key_nico2_flick_input_shift_0,
 		R.xml.key_nico2_input_a_0,
 		R.xml.key_nico2_input_k_0,
 		R.xml.key_nico2_input_s_0,
@@ -818,7 +867,7 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 		R.xml.key_nico2_input_w_0,
 
 		R.xml.key_nico2_flick_katakana_full_top_0,
-		R.xml.key_nico2_flick_katakana_full_top_0,
+		R.xml.key_nico2_flick_katakana_full_shift_0,
 		R.xml.key_nico2_katakana_full_a_0,
 		R.xml.key_nico2_katakana_full_k_0,
 		R.xml.key_nico2_katakana_full_s_0,
@@ -830,7 +879,7 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 		R.xml.key_nico2_katakana_full_r_0,
 		R.xml.key_nico2_katakana_full_w_0,
 		R.xml.key_nico2_flick_katakana_full_input_top_0,
-		R.xml.key_nico2_flick_katakana_full_input_top_0,
+		R.xml.key_nico2_flick_katakana_full_input_shift_0,
 		R.xml.key_nico2_katakana_full_input_a_0,
 		R.xml.key_nico2_katakana_full_input_k_0,
 		R.xml.key_nico2_katakana_full_input_s_0,
@@ -843,7 +892,7 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 		R.xml.key_nico2_katakana_full_input_w_0,
 
 		R.xml.key_nico2_flick_katakana_half_top_0,
-		R.xml.key_nico2_flick_katakana_half_top_0,
+		R.xml.key_nico2_flick_katakana_half_shift_0,
 		R.xml.key_nico2_katakana_half_a_0,
 		R.xml.key_nico2_katakana_half_k_0,
 		R.xml.key_nico2_katakana_half_s_0,
@@ -855,7 +904,7 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 		R.xml.key_nico2_katakana_half_r_0,
 		R.xml.key_nico2_katakana_half_w_0,
 		R.xml.key_nico2_flick_katakana_half_input_top_0,
-		R.xml.key_nico2_flick_katakana_half_input_top_0,
+		R.xml.key_nico2_flick_katakana_half_input_shift_0,
 		R.xml.key_nico2_katakana_half_input_a_0,
 		R.xml.key_nico2_katakana_half_input_k_0,
 		R.xml.key_nico2_katakana_half_input_s_0,
@@ -869,7 +918,7 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 	};
 	private static final int selectFlickPortKeyTable[] = {
 		R.xml.key_nico2_flick_top_0,
-		R.xml.key_nico2_flick_top_0,
+		R.xml.key_nico2_flick_shift_0,
 		R.xml.key_nico2_a_0,
 		R.xml.key_nico2_k_0,
 		R.xml.key_nico2_s_0,
@@ -881,7 +930,7 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 		R.xml.key_nico2_r_0,
 		R.xml.key_nico2_w_0,
 		R.xml.key_nico2_flick_input_top_0,
-		R.xml.key_nico2_flick_input_top_0,
+		R.xml.key_nico2_flick_input_shift_0,
 		R.xml.key_nico2_input_a_0,
 		R.xml.key_nico2_input_k_0,
 		R.xml.key_nico2_input_s_0,
@@ -894,7 +943,7 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 		R.xml.key_nico2_input_w_0,
 
 		R.xml.key_nico2_flick_katakana_full_top_0,
-		R.xml.key_nico2_flick_katakana_full_top_0,
+		R.xml.key_nico2_flick_katakana_full_shift_0,
 		R.xml.key_nico2_katakana_full_a_0,
 		R.xml.key_nico2_katakana_full_k_0,
 		R.xml.key_nico2_katakana_full_s_0,
@@ -906,7 +955,7 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 		R.xml.key_nico2_katakana_full_r_0,
 		R.xml.key_nico2_katakana_full_w_0,
 		R.xml.key_nico2_flick_katakana_full_input_top_0,
-		R.xml.key_nico2_flick_katakana_full_input_top_0,
+		R.xml.key_nico2_flick_katakana_full_input_shift_0,
 		R.xml.key_nico2_katakana_full_input_a_0,
 		R.xml.key_nico2_katakana_full_input_k_0,
 		R.xml.key_nico2_katakana_full_input_s_0,
@@ -919,7 +968,7 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 		R.xml.key_nico2_katakana_full_input_w_0,
 
 		R.xml.key_nico2_flick_katakana_half_top_0,
-		R.xml.key_nico2_flick_katakana_half_top_0,
+		R.xml.key_nico2_flick_katakana_half_shift_0,
 		R.xml.key_nico2_katakana_half_a_0,
 		R.xml.key_nico2_katakana_half_k_0,
 		R.xml.key_nico2_katakana_half_s_0,
@@ -931,7 +980,7 @@ public class SetupKeyboardNico2 extends SetupKeyboard {
 		R.xml.key_nico2_katakana_half_r_0,
 		R.xml.key_nico2_katakana_half_w_0,
 		R.xml.key_nico2_flick_katakana_half_input_top_0,
-		R.xml.key_nico2_flick_katakana_half_input_top_0,
+		R.xml.key_nico2_flick_katakana_half_input_shift_0,
 		R.xml.key_nico2_katakana_half_input_a_0,
 		R.xml.key_nico2_katakana_half_input_k_0,
 		R.xml.key_nico2_katakana_half_input_s_0,

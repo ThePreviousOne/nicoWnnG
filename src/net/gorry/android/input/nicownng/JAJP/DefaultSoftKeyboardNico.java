@@ -54,7 +54,8 @@ public class DefaultSoftKeyboardNico extends DefaultSoftKeyboardJAJP {
 	public DefaultSoftKeyboardNico(final NicoWnnG parent, final SetupKeyboard keyboard) {
 		super(parent);
 		mSetupKeyboard       = keyboard;
-		mCycleTable   = keyboard.SetupCycleTable();
+		mCycleTable          = keyboard.SetupCycleTable();
+		mCycleTableColumns   = keyboard.GetCycleTableColumns();
 
 		mCurrentKeyMode      = KEYMODE_JA_FULL_NICO;
 		mNicoKeyMode         = NICO_MODE_FULL_HIRAGANA;
@@ -1287,7 +1288,7 @@ public class DefaultSoftKeyboardNico extends DefaultSoftKeyboardJAJP {
 		final String[][] cycleTable = getCycleTable();
 
 		if (null != cycleTable) {
-			return cycleTable[col * 10 + row];
+			return cycleTable[col * mCycleTableColumns + row];
 		}
 		return null;
 	}
@@ -1403,6 +1404,11 @@ public class DefaultSoftKeyboardNico extends DefaultSoftKeyboardJAJP {
 			case KEYCODE_JP12_8:
 			case KEYCODE_JP12_9:
 			case KEYCODE_JP12_0:
+			case KEYCODE_NEWKEY_0:
+			case KEYCODE_NEWKEY_1:
+			case KEYCODE_NEWKEY_2:
+			case KEYCODE_NEWKEY_3:
+			case KEYCODE_NEWKEY_4:
 				if (mNicoFirst == false) {
 					mWnn.onEvent(mWnn.mEventTouchOtherKey);
 					if (NICOFLICK_NONE == mFlickNicoInput) {
@@ -1445,17 +1451,17 @@ public class DefaultSoftKeyboardNico extends DefaultSoftKeyboardJAJP {
 						Log.e("NicoWnnG", "not founds cycle table");
 					}
 					else{
-						if (cycleTable[col * 10 + row][0].equals("\u309b")) {
+						if (cycleTable[col * mCycleTableColumns + row][0].equals("\u309b")) {
 							retcode = onKeyNico(KEYCODE_DAKUTEN, keyCodes);
 							mRecursiveOnKeyNico--;
 							return retcode;
 						}
-						if (cycleTable[col * 10 + row][0].equals("\u309c")) {
+						if (cycleTable[col * mCycleTableColumns + row][0].equals("\u309c")) {
 							retcode = onKeyNico(KEYCODE_HANDAKUTEN, keyCodes);
 							mRecursiveOnKeyNico--;
 							return retcode;
 						}
-						mWnn.onEvent(new NicoWnnGEvent(NicoWnnGEvent.TOGGLE_CHAR, cycleTable[col * 10 + row]));
+						mWnn.onEvent(new NicoWnnGEvent(NicoWnnGEvent.TOGGLE_CHAR, cycleTable[col * mCycleTableColumns + row]));
 					}
 					mNicoFirst = false;
 					mNicoFlick = false;
@@ -1745,7 +1751,7 @@ public class DefaultSoftKeyboardNico extends DefaultSoftKeyboardJAJP {
 			case KEYMODE_JA_HALF_NICO_KATAKANA:
 			case KEYMODE_JA_HALF_ALPHABET:
 			case KEYMODE_JA_FULL_ALPHABET:
-				code = mSetupKeyboard.GetFlickChangeMap(prev, key);
+				code = mSetupKeyboard.GetFlickChangeMap(mCurrentKeyMode, prev, key);
 		}
 		return code;
 	}
@@ -1758,6 +1764,7 @@ public class DefaultSoftKeyboardNico extends DefaultSoftKeyboardJAJP {
 	/* */
 	SetupKeyboard              mSetupKeyboard;
 	String[][][][]             mCycleTable;
+	int                        mCycleTableColumns;
 	// HashMap<String, String>    mReplaceTable;
 
 

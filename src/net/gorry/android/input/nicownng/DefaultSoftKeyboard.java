@@ -247,6 +247,13 @@ public class DefaultSoftKeyboard implements InputViewManager, KeyboardView.OnKey
 	/** Key code for switching to half-width Nicotouch katakana mode */
 	public static final int KEYCODE_SWITCH_HALF_NICO_KATAKANA = -402;
 
+	/** Nico2 keys */
+	public static final int KEYCODE_NEWKEY_0 = -410;
+	public static final int KEYCODE_NEWKEY_1 = -411;
+	public static final int KEYCODE_NEWKEY_2 = -412;
+	public static final int KEYCODE_NEWKEY_3 = -413;
+	public static final int KEYCODE_NEWKEY_4 = -414;
+
 	/** Key code for DAKUTEN/HANDAKUTEN conversion */
 	public static final int KEYCODE_DAKUTEN = -900;
 	public static final int KEYCODE_HANDAKUTEN = -901;

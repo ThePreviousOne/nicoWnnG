@@ -391,7 +391,9 @@ public abstract class UserDictionaryToolsEdit extends Activity implements View.O
 	private boolean inputDataCheck(final View v) {
 
 		/* return false if the length of the string exceeds the limit. */
-		if ((((TextView)v).getTextSize()) > MAX_TEXT_SIZE) {
+		TextView tv = (TextView)v;
+		int len = tv.getText().length();
+		if (len > MAX_TEXT_SIZE) {
 			showDialog(DIALOG_CONTROL_OVER_MAX_TEXT_SIZE);
 			Log.e("NicoWnnG", "inputDataCheck() : over max string length.");
 			return false;

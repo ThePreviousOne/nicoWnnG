@@ -74,6 +74,7 @@ public class ConfigBackup {
 		copyElementString ("convert_keymap_type", "0", true);
 		copyElementString ("cutpasteaction_byime", "3", true);
 		copyElementBoolean("different_pl", true, false);
+		copyElementString ("emoji_type", "1", true);
 		copyElementBoolean("english_predict_12key", true, true);
 		copyElementBoolean("english_predict_qwerty", false, true);
 		copyElementBoolean("flick_guide", true, true);

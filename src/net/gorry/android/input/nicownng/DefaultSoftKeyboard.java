@@ -2404,6 +2404,9 @@ public class DefaultSoftKeyboard implements InputViewManager, KeyboardView.OnKey
 				if (mCurrentKeyMode == KEYMODE_JA_FULL_HIRAGANA) {
 					return true;
 				}
+				if (mCurrentKeyMode == KEYMODE_JA_FULL_NICO) {
+					return true;
+				}
 				break;
 		}
 		return false;
@@ -2413,6 +2416,9 @@ public class DefaultSoftKeyboard implements InputViewManager, KeyboardView.OnKey
 		switch (mQwertyKanaMode) {
 			case KANAMODE_JIS:
 			case KANAMODE_JIS2:
+				if (mCurrentKeyMode == KEYMODE_JA_FULL_KATAKANA) {
+					return true;
+				}
 				if (mCurrentKeyMode == KEYMODE_JA_FULL_KATAKANA) {
 					return true;
 				}

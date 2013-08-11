@@ -18,6 +18,7 @@ package net.gorry.android.input.nicownng;
 
 import java.io.File;
 
+import android.R.integer;
 import android.content.ContentValues;
 import android.database.DatabaseUtils;
 import android.database.SQLException;
@@ -884,27 +885,29 @@ public class NicoWnnGDictionaryImpl implements WnnDictionary {
             int count = cursor.getCount();
             cursor.close();
 
-            if( count + word.length > MAX_WORDS_IN_USER_DICTIONARY ) {
-                /* If user dictionary is full, an error occurs. */
-                return -1;
+            int words = word.length;
+            if (words > MAX_WORDS_IN_USER_DICTIONARY-count) {
+            	words = MAX_WORDS_IN_USER_DICTIONARY-count;
             }
 			mDbDic.beginTransaction();
 			try {
 			    StringBuilder strokeSQL    = new StringBuilder();
 			    StringBuilder candidateSQL = new StringBuilder();
 
-			    for( int index = 0 ; index < word.length ; index++ ) {
+			    for( int index=0; index < words; index++ ) {
+			    	boolean noreg = false;
 			    	if (progress != null) {
 			    		if ((index % 100) == 0) {
 			    			progress.run();
 			    		}
 			    	}
-			        if( word[index].stroke.length()    > 0 && word[index].stroke.length()    <= MAX_STROKE_LENGTH &&
-			            word[index].candidate.length() > 0 && word[index].candidate.length() <= MAX_CANDIDATE_LENGTH ) {
+			    	WnnWord w = word[index];
+			    	if (w.stroke.length()    > 0 && w.stroke.length()    <= MAX_STROKE_LENGTH &&
+			            w.candidate.length() > 0 && w.candidate.length() <= MAX_CANDIDATE_LENGTH ) {
 			            strokeSQL.setLength( 0 );
 			            candidateSQL.setLength( 0 );
-			            DatabaseUtils.appendEscapedSQLString( strokeSQL, word[index].stroke );
-			            DatabaseUtils.appendEscapedSQLString( candidateSQL, word[index].candidate );
+			            DatabaseUtils.appendEscapedSQLString( strokeSQL, w.stroke );
+			            DatabaseUtils.appendEscapedSQLString( candidateSQL, w.candidate );
 
 			            // if (false) {
 			            	cursor = ( SQLiteCursor )mDbDic.query(
@@ -919,23 +922,21 @@ public class NicoWnnGDictionaryImpl implements WnnDictionary {
 			            	if( cursor.getCount() > 0 ) {
 			            		/* if the specified word is exist, an error reported and skipped that word. */
 			            		result = -2;
+			            		noreg = true;
 			            	}
 			            	cursor.close( );
 			            	cursor = null;
 			            // }
-			            if (result != 0) {
-			            	break;
+			            	if (!noreg) {
+			            		ContentValues content = new ContentValues();
+			            		content.clear();
+			            		content.put( COLUMN_NAME_TYPE,      TYPE_NAME_USER );
+			            		content.put( COLUMN_NAME_STROKE,    w.stroke );
+			            		content.put( COLUMN_NAME_CANDIDATE, w.candidate );
+			            		content.put( COLUMN_NAME_POS_LEFT,  w.partOfSpeech.left );
+			            		content.put( COLUMN_NAME_POS_RIGHT, w.partOfSpeech.right );
+			            		mDbDic.insert( TABLE_NAME_DIC, null, content );
 			            }
-
-			            ContentValues content = new ContentValues();
-			            content.clear();
-			            content.put( COLUMN_NAME_TYPE,      TYPE_NAME_USER );
-			            content.put( COLUMN_NAME_STROKE,    word[index].stroke );
-			            content.put( COLUMN_NAME_CANDIDATE, word[index].candidate );
-			            content.put( COLUMN_NAME_POS_LEFT,  word[index].partOfSpeech.left );
-			            content.put( COLUMN_NAME_POS_RIGHT, word[index].partOfSpeech.right );
-			            mDbDic.insert( TABLE_NAME_DIC, null, content );
-
 			        }
 			    }
 			    mDbDic.setTransactionSuccessful();

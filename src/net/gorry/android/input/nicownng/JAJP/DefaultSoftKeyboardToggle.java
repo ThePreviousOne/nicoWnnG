@@ -1283,16 +1283,20 @@ public class DefaultSoftKeyboardToggle extends DefaultSoftKeyboardJAJP {
 	@Override
 	public void setReverseKey() {
 		if (mCurrentKeyboard != null) {
-			mCurrentKeyboard.assign12KeyReverse(true);
-			mKeyboardView.invalidateKey(mCurrentKeyboard.setReverseKeyIndex());
+			if (mUse12KeyShift) {
+				mCurrentKeyboard.assign12KeyReverse(true);
+				mKeyboardView.invalidateKey(mCurrentKeyboard.setReverseKeyIndex());
+			}
 		}
 	}
 
 	@Override
 	public void restoreReverseKey() {
 		if (mCurrentKeyboard != null) {
-			mCurrentKeyboard.assign12KeyReverse(false);
-			mKeyboardView.invalidateKey(mCurrentKeyboard.setReverseKeyIndex());
+			if (mUse12KeyShift) {
+				mCurrentKeyboard.assign12KeyReverse(false);
+				mKeyboardView.invalidateKey(mCurrentKeyboard.setReverseKeyIndex());
+			}
 		}
 	}
 

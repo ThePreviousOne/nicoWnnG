@@ -2235,12 +2235,16 @@ public class NicoWnnGJAJP extends NicoWnnG {
 				switch (mUseConvertKeyMap) {
 					case CONVERT_KEYMAP_KB_US_OS_US:
 						return keyCodeUs2JisFullHiraganaShiftCharTable[keyCode];
+					case CONVERT_KEYMAP_KB_JIS_OS_US:
+						return keyCodeUs2JisFullHiraganaShiftCharTable[keyCode];
 					default:
 						return keyCodeJis2JisFullHiraganaShiftCharTable[keyCode];
 				}
 			}
 			switch (mUseConvertKeyMap) {
 				case CONVERT_KEYMAP_KB_US_OS_US:
+					return keyCodeUs2JisFullHiraganaCharTable[keyCode];
+				case CONVERT_KEYMAP_KB_JIS_OS_US:
 					return keyCodeUs2JisFullHiraganaCharTable[keyCode];
 				default:
 					return keyCodeJis2JisFullHiraganaCharTable[keyCode];
@@ -2719,12 +2723,16 @@ public class NicoWnnGJAJP extends NicoWnnG {
 				switch (mUseConvertKeyMap) {
 					case CONVERT_KEYMAP_KB_US_OS_US:
 						return keyCodeUs2JisFullKatakanaShiftCharTable[keyCode];
+					case CONVERT_KEYMAP_KB_JIS_OS_US:
+						return keyCodeUs2JisFullKatakanaShiftCharTable[keyCode];
 					default:
 						return keyCodeJis2JisFullKatakanaShiftCharTable[keyCode];
 				}
 			}
 			switch (mUseConvertKeyMap) {
 				case CONVERT_KEYMAP_KB_US_OS_US:
+					return keyCodeUs2JisFullKatakanaCharTable[keyCode];
+				case CONVERT_KEYMAP_KB_JIS_OS_US:
 					return keyCodeUs2JisFullKatakanaCharTable[keyCode];
 				default:
 					return keyCodeJis2JisFullKatakanaCharTable[keyCode];
@@ -3203,12 +3211,16 @@ public class NicoWnnGJAJP extends NicoWnnG {
 				switch (mUseConvertKeyMap) {
 					case CONVERT_KEYMAP_KB_US_OS_US:
 						return keyCodeUs2JisHalfKatakanaShiftCharTable[keyCode];
+					case CONVERT_KEYMAP_KB_JIS_OS_US:
+						return keyCodeUs2JisHalfKatakanaShiftCharTable[keyCode];
 					default:
 						return keyCodeJis2JisHalfKatakanaShiftCharTable[keyCode];
 				}
 			}
 			switch (mUseConvertKeyMap) {
 				case CONVERT_KEYMAP_KB_US_OS_US:
+					return keyCodeUs2JisHalfKatakanaCharTable[keyCode];
+				case CONVERT_KEYMAP_KB_JIS_OS_US:
 					return keyCodeUs2JisHalfKatakanaCharTable[keyCode];
 				default:
 					return keyCodeJis2JisHalfKatakanaCharTable[keyCode];

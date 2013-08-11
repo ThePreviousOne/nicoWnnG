@@ -74,7 +74,7 @@
   <string name="preference_keyboard_simple">Simple</string>
   <string name="preference_keyboard_metal">Metal</string>
 
-  <string name="preference_conversion_menu">Conversion</string>
+  <string name="preference_conversion_menu">Input/Conversion</string>
 
   <string name="preference_prediction_afterenter_title">Prediction after Conversion</string>
   <string name="preference_prediction_afterenter_summary">Display next predicted word based on last selected conversion Japanese word</string>
@@ -176,6 +176,14 @@
 	<string name="preference_autoforward_toggle_12key_title">Auto-Forward in Toggle Mode</string>
 	<string name="preference_autoforward_toggle_12key_summary">In 12-key Toggle Mode, you can Type the Next Letter Waiting a little after Toggling the Key</string>
 
+	<string name="preference_emoji_type_title">Emoji Input Style</string>
+	<string name="preference_emoji_type_summary">Select Input Style of Emoji. Suitable style for Emoji Input depends on the model. Several models can not input Emoji.</string>
+	<string name="preference_emoji_type_old">Compatible for NTT docomo under OS 4.0</string>
+	<string name="preference_emoji_type_unicode">Unicode</string>
+	<string name="preference_emoji_type_docomo">NTT docomo</string>
+	<string name="preference_emoji_type_softbank">Softbank Mobile</string>
+	<string name="preference_emoji_type_au">au KDDI</string>
+	
   <!-- Dialog Messages -->
   <string name="dialog_button_ok">OK</string>
   <string name="dialog_button_cancel">Cancel</string>
@@ -428,14 +436,14 @@
 
    <!-- IME dependency -->
   <!-- OpenWnn English -->
-  <string name="nicownng_english_copyright">Ver.1.3.1\nOMRON SOFTWARE Co., Ltd.\nNicoWnn Ver.1.3.0\nNicoWnnG Ver.2013.0425.1</string>
+  <string name="nicownng_english_copyright">Ver.1.3.1\nOMRON SOFTWARE Co., Ltd.\nNicoWnn Ver.1.3.0\nNicoWnnG Ver.2013.0708.1</string>
   <string name="nicownng_english">nicoWnnG English</string>
   <string name="nicownng_english_system_dictionary">/data/data/net.gorry.android.input.nicownng/lib/libWnnEngDic.so</string>
   <string name="nicownng_english_writable_dictionary">/data/data/net.gorry.android.input.nicownng/writableEN.dic</string>
   <string name="en_word_separators">.,;:!?</string>
 
   <!-- OpenWnn Japanese -->
-  <string name="nicownng_japanese_copyright">Ver.1.3.1\nOMRON SOFTWARE Co., Ltd.\nNicoWnn Ver.1.3.0\nNicoWnnG Ver.2013.0425.1</string>
+  <string name="nicownng_japanese_copyright">Ver.1.3.1\nOMRON SOFTWARE Co., Ltd.\nNicoWnn Ver.1.3.0\nNicoWnnG Ver.2013.0708.1</string>
   <string name="nicownng_japanese">nicoWnnG IME</string>
   <string name="openwnn_japanese_system_dictionary">/data/data/net.gorry.android.input.nicownng/lib/libWnnJpnDic.so</string>
   <string name="nicownng_japanese_writable_dictionary">/data/data/net.gorry.android.input.nicownng/writableJAJP.dic</string>

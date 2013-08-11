@@ -170,12 +170,34 @@ public class SymbolList implements WnnEngine {
 					}
 				} while (userentry);
 
-				mSymbols.put(SYMBOL_DOCOMO_EMOJI00, getXmlfile(R.xml.symbols_docomo_emoji00_list));
-				mSymbols.put(SYMBOL_DOCOMO_EMOJI01, getXmlfile(R.xml.symbols_docomo_emoji01_list));
+				final SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(mWnn);
+				int emoji_type = Integer.valueOf(pref.getString("emoji_type", "1"));
+				switch (emoji_type) {
+				  default:
+				  case 0:
+					mSymbols.put(SYMBOL_DOCOMO_EMOJI00, getXmlfile(R.xml.symbols_docomo_emoji00_list));
+					mSymbols.put(SYMBOL_DOCOMO_EMOJI01, getXmlfile(R.xml.symbols_docomo_emoji01_list));
+					break;
+				  case 1:
+					mSymbols.put(SYMBOL_DOCOMO_EMOJI00, getXmlfile(R.xml.symbols_google_docomo_emoji00_list));
+					mSymbols.put(SYMBOL_DOCOMO_EMOJI01, getXmlfile(R.xml.symbols_google_docomo_emoji01_list));
+					break;
+				  case 2:
+					mSymbols.put(SYMBOL_DOCOMO_EMOJI00, getXmlfile(R.xml.symbols_google_softbank_emoji00_list));
+					mSymbols.put(SYMBOL_DOCOMO_EMOJI01, getXmlfile(R.xml.symbols_google_softbank_emoji01_list));
+					break;
+				  case 3:
+					mSymbols.put(SYMBOL_DOCOMO_EMOJI00, getXmlfile(R.xml.symbols_google_kddi_emoji00_list));
+					mSymbols.put(SYMBOL_DOCOMO_EMOJI01, getXmlfile(R.xml.symbols_google_kddi_emoji01_list));
+					break;
+				  case 4:
+					mSymbols.put(SYMBOL_DOCOMO_EMOJI00, getXmlfile(R.xml.symbols_google_unicode_emoji00_list));
+					mSymbols.put(SYMBOL_DOCOMO_EMOJI01, getXmlfile(R.xml.symbols_google_unicode_emoji01_list));
+					break;
+				}
 
 				final NicoWnnGJAJP t = NicoWnnGJAJP.getInstance();
 				final DefaultSoftKeyboard inputManager = ((DefaultSoftKeyboard)(t.mInputViewManager));
-				final SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(mWnn);
 				boolean addsymbolsemoji;
 				if (inputManager.getKeyboardType() == DefaultSoftKeyboard.KEYBOARD_12KEY) {
 					addsymbolsemoji = mWnn.getOrientPrefBoolean(pref, "symbol_addsymbolemoji_12key", true);

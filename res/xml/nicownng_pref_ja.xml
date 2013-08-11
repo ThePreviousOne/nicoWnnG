@@ -541,6 +541,14 @@
 			android:summary="@string/preference_correct_spell_summary"
 			android:defaultValue="true"
 			/>
+		<ListPreference
+			android:key="emoji_type"
+			android:title="@string/preference_emoji_type_title"
+			android:summary="@string/preference_emoji_type_summary"
+			android:entries="@array/emoji_type_entries"
+			android:entryValues="@array/emoji_type_values"
+			android:defaultValue="1"
+			/>
 	</PreferenceCategory>
 	<PreferenceCategory
 		android:title="@string/preference_dictionary_menu"

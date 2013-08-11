@@ -74,7 +74,7 @@
     <string name="preference_keyboard_simple">シンプル</string>
     <string name="preference_keyboard_metal">メタリック</string>
 
-    <string name="preference_conversion_menu">変換設定</string>
+    <string name="preference_conversion_menu">入力・変換設定</string>
 
     <string name="preference_prediction_afterenter_title">確定後予測変換</string>
     <string name="preference_prediction_afterenter_summary">日本語の変換確定後、その単語を元に次の予測変換候補を表示します</string>
@@ -369,6 +369,14 @@
 	<string name="preference_autoforward_toggle_12key_title">トグル入力自動確定</string>
 	<string name="preference_autoforward_toggle_12key_summary">「右矢印キーを押す」代わりに「トグル入力してから少し待つ」ことで、同じ行の文字（「かき」「ささ」など）を続けて入力できます</string>
 
+	<string name="preference_emoji_type_title">絵文字入力形式</string>
+	<string name="preference_emoji_type_summary">絵文字の入力に適した形式を選びます。形式は機種により異なり、入力できない機種もあります。</string>
+	<string name="preference_emoji_type_old">旧ドコモ互換（OS4.0未満用）</string>
+	<string name="preference_emoji_type_unicode">Unicode</string>
+	<string name="preference_emoji_type_docomo">NTTドコモ</string>
+	<string name="preference_emoji_type_softbank">ソフトバンクモバイル</string>
+	<string name="preference_emoji_type_au">au KDDI</string>
+				
     <!-- Dialog Messages -->
     <string name="dialog_button_ok">OK</string>
     <string name="dialog_button_cancel">キャンセル</string>
@@ -427,14 +435,14 @@
         
   <!-- IME dependency -->
     <!-- OpenWnn English -->
-    <string name="nicownng_english_copyright">OpenWnn Ver.1.3.1/NicoWnn Ver.1.3.0/NicoWnnG Ver.2013.0425.1\nオムロン ソフトウェア(株)/hiroshica/GORRY</string>
+    <string name="nicownng_english_copyright">OpenWnn Ver.1.3.1/NicoWnn Ver.1.3.0/NicoWnnG Ver.2013.0708.1\nオムロン ソフトウェア(株)/hiroshica/GORRY</string>
     <string name="nicownng_english">nicoWnnG English</string>
     <string name="nicownng_english_system_dictionary">/data/data/net.gorry.android.input.nicownng/lib/libWnnEngDic.so</string>
     <string name="nicownng_english_writable_dictionary">/data/data/net.gorry.android.input.nicownng/writableEN.dic</string>
     <string name="en_word_separators">.,;:!?</string>
 
     <!-- OpenWnn Japanese -->
-    <string name="nicownng_japanese_copyright">OpenWnn Ver.1.3.1/NicoWnn Ver.1.3.0/NicoWnnG Ver.2013.0425.1\nオムロン ソフトウェア(株)/hiroshica/GORRY</string>
+    <string name="nicownng_japanese_copyright">OpenWnn Ver.1.3.1/NicoWnn Ver.1.3.0/NicoWnnG Ver.2013.0708.1\nオムロン ソフトウェア(株)/hiroshica/GORRY</string>
     <string name="nicownng_japanese">nicoWnnG IME</string>
     <string name="openwnn_japanese_system_dictionary">/data/data/net.gorry.android.input.nicownng/lib/libWnnJpnDic.so</string>
     <string name="nicownng_japanese_writable_dictionary">/data/data/net.gorry.android.input.nicownng/writableJAJP.dic</string>

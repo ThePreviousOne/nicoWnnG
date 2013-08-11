@@ -317,5 +317,20 @@
     <item>3</item>
   </string-array>
 
+  <string-array name="emoji_type_entries">
+    <item>@string/preference_emoji_type_docomo</item>
+    <item>@string/preference_emoji_type_softbank</item>
+    <item>@string/preference_emoji_type_au</item>
+    <item>@string/preference_emoji_type_unicode</item>
+    <item>@string/preference_emoji_type_old</item>
+    </string-array>
+  <string-array name="emoji_type_values">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>0</item>
+  </string-array>
 
+  
 </resources>

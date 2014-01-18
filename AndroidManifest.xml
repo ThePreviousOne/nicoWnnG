@@ -17,8 +17,8 @@
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	package="net.gorry.android.input.nicownng"
-	android:versionName="2013.0708.1.1305"
-	android:versionCode="201307081"
+	android:versionName="2013.1231.1.1305"
+	android:versionCode="201312311"
 	>
 	<uses-permission
 		android:name="android.permission.VIBRATE"
@@ -28,7 +28,7 @@
 		/>
 	<uses-sdk
 		android:minSdkVersion="4"
-		android:targetSdkVersion="10"
+		android:targetSdkVersion="19"
 		/>
 	<application
 		android:icon="@drawable/icon"
@@ -78,17 +78,21 @@
 		</activity>
 		<activity
 			android:name="net.gorry.android.input.nicownng.JAJP.UserDictionaryToolsListJAJP"
+			android:theme="@android:style/Theme"
 			/>
 		<activity
 			android:name="net.gorry.android.input.nicownng.JAJP.UserDictionaryToolsEditJAJP"
 			android:label="@string/user_dictionary_edit_words"
+			android:theme="@android:style/Theme"
 			/>
 		<activity
 			android:name="net.gorry.android.input.nicownng.EN.UserDictionaryToolsListEN"
+			android:theme="@android:style/Theme"
 			/>
 		<activity
 			android:name="net.gorry.android.input.nicownng.EN.UserDictionaryToolsEditEN"
 			android:label="@string/user_dictionary_edit_words"
+			android:theme="@android:style/Theme"
 			/>
 		<activity
 			android:name=".Mushroom"

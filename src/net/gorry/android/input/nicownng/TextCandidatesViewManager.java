@@ -431,6 +431,7 @@ public class TextCandidatesViewManager implements CandidatesViewManager, Gesture
 
 		mViewBodyHScroll = (HorizontalScrollView)mViewBody.findViewById(R.id.candview_hscroll);
 		mViewBodyHScroll.setOnTouchListener(mCandidateOnTouch);
+		mViewBodyHScroll.setHorizontalFadingEdgeEnabled(true);
 		mIsLockHScroll = false;
 
 		// mViewCandidateBase2 = (ViewGroup)mViewBody.findViewById(R.id.candview_base2);

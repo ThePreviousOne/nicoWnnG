@@ -172,6 +172,13 @@
 
   <string name="preference_use_zenkaku_to_moji_title">[全角]キーで文字種を変更</string>
   <string name="preference_use_zenkaku_to_moji_summary">文字種（あＡ１）切り替えにハードキーの[全角]を使用します。</string>
+	<string name="preference_wait_mushroom_title">マッシュルーム入力待ち時間</string>
+	<string name="preference_wait_mushroom_summary">マッシュルームからの入力で取りこぼしが発生する機種の場合、大きくすることで解消できることがあります</string>
+    <string name="preference_wait_mushroom_1">1</string>
+    <string name="preference_wait_mushroom_2">2</string>
+    <string name="preference_wait_mushroom_3">3</string>
+    <string name="preference_wait_mushroom_4">4</string>
+    <string name="preference_wait_mushroom_5">5</string>
     <string name="preference_convert_keymap_type_title">キーマップの変換</string>
     <string name="preference_convert_keymap_type_summary">ハードキーの刻印通りに文字が入力できないときは、キーの変換を行うことができます</string>
     <string name="preference_convert_keymap_type_0">変換しない</string>
@@ -435,14 +442,14 @@
         
   <!-- IME dependency -->
     <!-- OpenWnn English -->
-    <string name="nicownng_english_copyright">OpenWnn Ver.1.3.1/NicoWnn Ver.1.3.0/NicoWnnG Ver.2013.0708.1\nオムロン ソフトウェア(株)/hiroshica/GORRY</string>
+    <string name="nicownng_english_copyright">OpenWnn Ver.1.3.1/NicoWnn Ver.1.3.0/NicoWnnG Ver.2013.1231.1\nオムロン ソフトウェア(株)/hiroshica/GORRY</string>
     <string name="nicownng_english">nicoWnnG English</string>
     <string name="nicownng_english_system_dictionary">/data/data/net.gorry.android.input.nicownng/lib/libWnnEngDic.so</string>
     <string name="nicownng_english_writable_dictionary">/data/data/net.gorry.android.input.nicownng/writableEN.dic</string>
     <string name="en_word_separators">.,;:!?</string>
 
     <!-- OpenWnn Japanese -->
-    <string name="nicownng_japanese_copyright">OpenWnn Ver.1.3.1/NicoWnn Ver.1.3.0/NicoWnnG Ver.2013.0708.1\nオムロン ソフトウェア(株)/hiroshica/GORRY</string>
+    <string name="nicownng_japanese_copyright">OpenWnn Ver.1.3.1/NicoWnn Ver.1.3.0/NicoWnnG Ver.2013.1231.1\nオムロン ソフトウェア(株)/hiroshica/GORRY</string>
     <string name="nicownng_japanese">nicoWnnG IME</string>
     <string name="openwnn_japanese_system_dictionary">/data/data/net.gorry.android.input.nicownng/lib/libWnnJpnDic.so</string>
     <string name="nicownng_japanese_writable_dictionary">/data/data/net.gorry.android.input.nicownng/writableJAJP.dic</string>

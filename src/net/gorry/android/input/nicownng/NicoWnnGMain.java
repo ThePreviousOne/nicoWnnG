@@ -15,6 +15,7 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.widget.Toast;
 import android.os.Build;
@@ -64,6 +65,7 @@ public class NicoWnnGMain extends Activity {
 			me = context;
 		}
 
+		@JavascriptInterface
 		public String getMachineType() {
 			int type = NicoWnnGJAJP.getInstance().getMachineType();
 			switch (type) {
@@ -120,14 +122,17 @@ public class NicoWnnGMain extends Activity {
 			return ("2_1");
 		}
 
+		@JavascriptInterface
 		public String getPortraitKeyboard() {
 			return getKeyboard("_portrait");
 		}
 
+		@JavascriptInterface
 		public String getLandscapeKeyboard() {
 			return getKeyboard("_landscape");
 		}
 
+		@JavascriptInterface
 		public String getKeyboardSize() {
 			final SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(me);
 			String key;
@@ -141,6 +146,7 @@ public class NicoWnnGMain extends Activity {
 			return String.valueOf(size);
 		}
 
+		@JavascriptInterface
 		public void callback(final String msg) {
 			if (msg.equalsIgnoreCase("languageSetting")) {
 				final Intent intent = new Intent(Intent.ACTION_MAIN);

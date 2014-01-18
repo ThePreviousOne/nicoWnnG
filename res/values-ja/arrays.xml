@@ -332,4 +332,19 @@
     <item>0</item>
   </string-array>
   
+  <string-array name="wait_mushroom_entries">
+    <item>@string/preference_wait_mushroom_1</item>
+    <item>@string/preference_wait_mushroom_2</item>
+    <item>@string/preference_wait_mushroom_3</item>
+    <item>@string/preference_wait_mushroom_4</item>
+    <item>@string/preference_wait_mushroom_5</item>
+    </string-array>
+  <string-array name="wait_mushroom_values">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+  </string-array>
+  
 </resources>

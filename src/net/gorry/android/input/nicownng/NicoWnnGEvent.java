@@ -16,6 +16,8 @@
 
 package net.gorry.android.input.nicownng;
 
+import android.R.integer;
+import android.util.Log;
 import android.view.KeyEvent;
 import java.util.*;
 
@@ -371,8 +373,33 @@ public class NicoWnnGEvent {
      * @param ev        The key event
      */
     public NicoWnnGEvent(int code, KeyEvent ev) {
+    	this(code, ev, 0);
+    }
+    /**
+     * Generate {@link NicoWnnGEvent} from {@link KeyEvent}
+     *
+     * @param code      The code
+     * @param ev        The key event
+     */
+    public NicoWnnGEvent(int code, KeyEvent ev, int f) {
+    	int flags = ev.getFlags();
+    	if ((f == 0) && (code == NicoWnnGEvent.INPUT_SOFT_KEY)) {
+    		f = KeyEvent.FLAG_SOFT_KEYBOARD|KeyEvent.FLAG_KEEP_TOUCH_MODE;
+    	}
+ Log.w("NicoWnnG", "code="+code+", keycode="+ev.getKeyCode()+", f="+f+", flags="+flags);
+    	flags |= f;
         this.code = code;
-        this.keyEvent = ev;
+        this.keyEvent = new KeyEvent(
+		  ev.getDownTime(),
+		  ev.getEventTime(),
+		  ev.getAction(),
+		  ev.getKeyCode(),
+		  ev.getRepeatCount(),
+		  ev.getMetaState(),
+		  ev.getDeviceId(),
+		  ev.getScanCode(),
+		  flags
+		);
     }
     /**
      * Generate {@link NicoWnnGEvent} for selecting a candidate

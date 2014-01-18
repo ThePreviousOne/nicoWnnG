@@ -30,6 +30,7 @@
 	  >
 		<LinearLayout 
 		  android:id="@+id/candidates_head"
+		  android:orientation="horizontal"
 		  android:layout_width="fill_parent" 
 		  android:layout_height="4dip" 
 		  android:background="@color/candidate_head"
@@ -74,6 +75,7 @@
 						  android:id="@+id/candview_hscroll"
 						  android:layout_width="fill_parent"
 						  android:layout_height="wrap_content"
+						  android:fadingEdge="horizontal"
 						  android:fadingEdgeLength="24dip"
 						  android:scrollbars="horizontal"
 						  >
@@ -102,8 +104,8 @@
 			  >
 				<Button
 				  android:id="@+id/button_fulllist"
-				  android:layout_width="wrap_content"
-				  android:layout_height="wrap_content"
+				  android:layout_width="32sp"
+				  android:layout_height="32sp"
 				  android:background="@drawable/candidate_listup"
 				  />
 			</LinearLayout>

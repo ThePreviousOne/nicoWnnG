@@ -140,16 +140,22 @@ public abstract class UserDictionaryToolsEdit extends Activity implements View.O
 			mEntryButton.setEnabled(false);
 			mRequestState = STATE_INSERT;
 		} else if (action.equals(Intent.ACTION_EDIT)) {
-			/* edit a word */
-			mEntryButton.setEnabled(true);
-			mReadEditText.setText(((TextView)sFocusingView).getText());
-			mCandidateEditText.setText(((TextView)sFocusingPairView).getText());
-			mRequestState = STATE_EDIT;
+			if (sFocusingView == null) {
+				/* add a word */
+				mEntryButton.setEnabled(false);
+				mRequestState = STATE_INSERT;
+			} else {
+				/* edit a word */
+				mEntryButton.setEnabled(true);
+				mReadEditText.setText(((TextView)sFocusingView).getText());
+				mCandidateEditText.setText(((TextView)sFocusingPairView).getText());
+				mRequestState = STATE_EDIT;
 
-			/* save the word's information before this edit */
-			mBeforeEditWnnWord = new WnnWord();
-			mBeforeEditWnnWord.stroke = ((TextView)sFocusingView).getText().toString();
-			mBeforeEditWnnWord.candidate = ((TextView)sFocusingPairView).getText().toString();
+				/* save the word's information before this edit */
+				mBeforeEditWnnWord = new WnnWord();
+				mBeforeEditWnnWord.stroke = ((TextView)sFocusingView).getText().toString();
+				mBeforeEditWnnWord.candidate = ((TextView)sFocusingPairView).getText().toString();
+			}
 		} else {
 			/* finish if it is unknown request */
 			Log.e("NicoWnnG", "onCreate() : Invaled Get Intent. ID=" + intent);

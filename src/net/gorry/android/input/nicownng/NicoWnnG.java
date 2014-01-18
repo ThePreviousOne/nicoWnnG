@@ -1000,9 +1000,13 @@ public class NicoWnnG extends InputMethodService {
 	final private Runnable rMushroom = new Runnable() {
 		public void run() {
 			final InputConnection ic = getCurrentInputConnection();
-			if (mMushroomWord != null) {
-				if (mMushroomWord.length() > 0) {
-					ic.commitText(mMushroomWord, 1);
+			if ((mMushroomWord != null) && (mMushroomWord.length() > 0)) {
+				ic.commitText(mMushroomWord, 1);
+				if ((mMushroomSrc != null) && (mMushroomSrc.length() > 0)) {
+					if (mConverter != null) {
+						WnnWord word = new WnnWord(mMushroomWord, mMushroomSrc);
+						mConverter.learn(word);
+					}
 				}
 			}
 
@@ -1010,7 +1014,9 @@ public class NicoWnnG extends InputMethodService {
 		}
 	};
 
+	private String mMushroomSrc = "";
 	public void invokeMushroom(final String src) {
+		mMushroomSrc = src;
 		// hideWindow();
 		final Intent intent = new Intent(
 				this, Mushroom.class
@@ -1038,7 +1044,9 @@ public class NicoWnnG extends InputMethodService {
 		if (extras != null) {
 			mMushroomWord = extras.getString("replace_key");
 		}
-		hMushroom.postDelayed(rMushroom, 250);
+		final SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+		int wait = Integer.valueOf(pref.getString("wait_mushroom", "3"));
+		hMushroom.postDelayed(rMushroom, wait*200);
 	}
 
 	public class MushroomReceiver extends BroadcastReceiver {

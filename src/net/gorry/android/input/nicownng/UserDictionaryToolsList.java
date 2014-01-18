@@ -238,7 +238,9 @@ implements View.OnClickListener, OnTouchListener, OnFocusChangeListener {
 		b.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(final View v) {
-				wordEdit(sFocusingView, sFocusingPairView);
+				if (sFocusingView != null) {
+					wordEdit(sFocusingView, sFocusingPairView);
+				}
 			}
 		});
 
@@ -246,7 +248,9 @@ implements View.OnClickListener, OnTouchListener, OnFocusChangeListener {
 		b.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(final View v) {
-				showDialog(DIALOG_CONTROL_DELETE_CONFIRM);
+				if (sFocusingView != null) {
+					showDialog(DIALOG_CONTROL_DELETE_CONFIRM);
+				}
 			}
 		});
 

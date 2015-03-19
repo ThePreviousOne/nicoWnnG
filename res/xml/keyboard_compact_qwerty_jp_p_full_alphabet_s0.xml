@@ -28,7 +28,7 @@
 		<Key android:codes="65296" android:keyLabel="0"  />
 		<Key android:codes="65293" android:keyLabel="@string/key_qwerty_full_minus_sign" android:keyEdgeFlags="right" />
 	</Row>
-	<Row android:rowEdgeFlags="top">
+	<Row>
 		<Key android:codes="65361" android:keyLabel="q" android:keyEdgeFlags="left" />
 		<Key android:codes="65367" android:keyLabel="w" />
 		<Key android:codes="65349" android:keyLabel="e" />

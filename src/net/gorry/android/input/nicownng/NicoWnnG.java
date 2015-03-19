@@ -380,22 +380,8 @@ public class NicoWnnG extends InputMethodService {
 
 	private KeyEvent convKeyCode_US_on_US(KeyEvent event) {
 		int scancode = event.getScanCode();
-		switch (scancode) {
-		// たまたま手許にあったLBR-BTK1
-		case 172:  // ESCキーの位置にあるHOMEキー
-			return new KeyEvent(
-				event.getDownTime(),
-				event.getEventTime(),
-				event.getAction(),
-				KeyEvent.KEYCODE_BACK, // event.getKeyCode(),
-				event.getRepeatCount(),
-				event.getMetaState(),
-				event.getDeviceId(),
-				event.getScanCode(),
-				event.getFlags()
-			);
-
-		}
+//		switch (scancode) {
+//		}
 		return event;
 	}
 
@@ -416,9 +402,42 @@ public class NicoWnnG extends InputMethodService {
 			case CONVERT_KEYMAP_KB_US_OS_US:
 				event = convKeyCode_US_on_US(event);
 				break;
-			default:
+			case CONVERT_KEYMAP_KB_JIS_OS_JIS:
 				event = convKeyCode_JIS_on_JIS(event);
 				break;
+			default:
+				break;
+		}
+		if (mUseConvertKeyMap != CONVERT_KEYMAP_NONE) {
+			int scancode = event.getScanCode();
+			switch (scancode) {
+			case 172:  // LBR-BTK1 ESCキーの位置にあるHOMEキー
+				event = new KeyEvent(
+					event.getDownTime(),
+					event.getEventTime(),
+					event.getAction(),
+					KeyEvent.KEYCODE_BACK, // event.getKeyCode(),
+					event.getRepeatCount(),
+					event.getMetaState(),
+					event.getDeviceId(),
+					event.getScanCode(),
+					event.getFlags()
+				);
+				break;
+			case 244:  // NEC TerrainのVoiceキー
+				event = new KeyEvent(
+					event.getDownTime(),
+					event.getEventTime(),
+					event.getAction(),
+					DefaultSoftKeyboard.KEYCODE_IS01_MOJI, // event.getKeyCode(),
+					event.getRepeatCount(),
+					event.getMetaState(),
+					event.getDeviceId(),
+					event.getScanCode(),
+					event.getFlags()
+				);
+				break;
+			}
 		}
 		mConsumeDownEvent = onEvent(new NicoWnnGEvent(event));
 		ret = mConsumeDownEvent;
@@ -2114,9 +2133,10 @@ public class NicoWnnG extends InputMethodService {
 	protected boolean mUseLeftRightKeyCandidateSelection = true;
 
 	/** キーボード配列の変換 */
-	public static final int CONVERT_KEYMAP_NONE = 0;
+	public static final int CONVERT_KEYMAP_KB_JIS_OS_JIS = 0;
 	public static final int CONVERT_KEYMAP_KB_JIS_OS_US = 1;
 	public static final int CONVERT_KEYMAP_KB_US_OS_US = 2;
+	public static final int CONVERT_KEYMAP_NONE = 3;
 	protected int mUseConvertKeyMap = CONVERT_KEYMAP_KB_JIS_OS_US;
 	protected boolean mUseZenkakuKeyToMoji = true;
 

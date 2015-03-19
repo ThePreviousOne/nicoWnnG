@@ -338,7 +338,8 @@ public class DefaultSoftKeyboardEN extends DefaultSoftKeyboard {
 						new KeyEvent(KeyEvent.ACTION_DOWN,
 								KeyEvent.KEYCODE_DPAD_RIGHT)));
 			default:
-				if (mCurrentKeyboard.getAltKeyIndicator() || mCurrentKeyboard.getCtrlKeyIndicator()) {
+				if ((mCurrentKeyboard.getAltKeyIndicator() && ((mCutPasteActionByIme & CUTPASTEACTIONBYIME_ALT) != 0)) ||
+							(mCurrentKeyboard.getCtrlKeyIndicator() && ((mCutPasteActionByIme & CUTPASTEACTIONBYIME_CTRL) != 0))) {
 					if (connection != null) {
 						switch (primaryCode) {
 							case 'a':

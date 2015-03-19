@@ -2454,5 +2454,9 @@ public class DefaultSoftKeyboard implements InputViewManager, KeyboardView.OnKey
 	public int getPrevInputKeyCode() {
 		return mPrevInputKeyCode;
 	}
+	
+	public int getCutPasteActionByIme() {
+		return mCutPasteActionByIme;
+	}
 }
 /**************** end of file ****************/

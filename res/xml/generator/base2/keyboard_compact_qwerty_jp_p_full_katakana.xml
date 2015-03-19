@@ -28,7 +28,7 @@
 		<Key android:codes="48" android:keyLabel="0" local:option="2" />
 		<Key android:codes="12540" android:keyLabel="@string/key_qwerty_tyouon" local:option="3" />
 	</Row>
-	<Row android:rowEdgeFlags="top">
+	<Row>
 		<Key android:codes="113" android:keyLabel="q" android:keyEdgeFlags="left" />
 		<Key android:codes="119" android:keyLabel="w" />
 		<Key android:codes="101" android:keyLabel="e" />

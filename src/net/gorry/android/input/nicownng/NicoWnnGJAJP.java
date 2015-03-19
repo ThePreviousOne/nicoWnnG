@@ -1359,6 +1359,7 @@ public class NicoWnnGJAJP extends NicoWnnG {
 
 			case NicoWnnGEvent.INPUT_KEY:
 				final DefaultSoftKeyboard inputManager = ((DefaultSoftKeyboard) mInputViewManager);
+				int cutPasteActionByIme = inputManager.getCutPasteActionByIme();
 				/* update shift/alt state */
 				switch (keyCode) {
 					case KeyEvent.KEYCODE_0:
@@ -1495,7 +1496,7 @@ public class NicoWnnGJAJP extends NicoWnnG {
 
 					case KeyEvent.KEYCODE_A:
 						if (mInputConnection != null) {
-							if (keyEvent.isAltPressed() || isCtrlPressed(keyEvent)) {
+							if ((keyEvent.isAltPressed() && ((cutPasteActionByIme & DefaultSoftKeyboard.CUTPASTEACTIONBYIME_ALT) != 0)) || (isCtrlPressed(keyEvent) && ((cutPasteActionByIme & DefaultSoftKeyboard.CUTPASTEACTIONBYIME_CTRL) != 0))) {
 								mHardAlt = 0;
 								mHardShift = 0;
 								mHardCtrl = 0;
@@ -1508,7 +1509,7 @@ public class NicoWnnGJAJP extends NicoWnnG {
 
 					case KeyEvent.KEYCODE_X:
 						if (mInputConnection != null) {
-							if (keyEvent.isAltPressed() || isCtrlPressed(keyEvent)) {
+							if ((keyEvent.isAltPressed() && ((cutPasteActionByIme & DefaultSoftKeyboard.CUTPASTEACTIONBYIME_ALT) != 0)) || (isCtrlPressed(keyEvent) && ((cutPasteActionByIme & DefaultSoftKeyboard.CUTPASTEACTIONBYIME_CTRL) != 0))) {
 								mHardAlt = 0;
 								mHardShift = 0;
 								mHardCtrl = 0;
@@ -1521,7 +1522,7 @@ public class NicoWnnGJAJP extends NicoWnnG {
 
 					case KeyEvent.KEYCODE_C:
 						if (mInputConnection != null) {
-							if (keyEvent.isAltPressed() || isCtrlPressed(keyEvent)) {
+							if ((keyEvent.isAltPressed() && ((cutPasteActionByIme & DefaultSoftKeyboard.CUTPASTEACTIONBYIME_ALT) != 0)) || (isCtrlPressed(keyEvent) && ((cutPasteActionByIme & DefaultSoftKeyboard.CUTPASTEACTIONBYIME_CTRL) != 0))) {
 								mHardAlt = 0;
 								mHardShift = 0;
 								mHardCtrl = 0;
@@ -1534,7 +1535,7 @@ public class NicoWnnGJAJP extends NicoWnnG {
 
 					case KeyEvent.KEYCODE_V:
 						if (mInputConnection != null) {
-							if (keyEvent.isAltPressed() || isCtrlPressed(keyEvent)) {
+							if ((keyEvent.isAltPressed() && ((cutPasteActionByIme & DefaultSoftKeyboard.CUTPASTEACTIONBYIME_ALT) != 0)) || (isCtrlPressed(keyEvent) && ((cutPasteActionByIme & DefaultSoftKeyboard.CUTPASTEACTIONBYIME_CTRL) != 0))) {
 								mHardAlt = 0;
 								mHardShift = 0;
 								mHardCtrl = 0;

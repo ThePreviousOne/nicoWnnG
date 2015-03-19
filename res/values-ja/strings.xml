@@ -181,12 +181,13 @@
     <string name="preference_wait_mushroom_5">5</string>
     <string name="preference_convert_keymap_type_title">キーマップの変換</string>
     <string name="preference_convert_keymap_type_summary">ハードキーの刻印通りに文字が入力できないときは、キーの変換を行うことができます</string>
-    <string name="preference_convert_keymap_type_0">変換しない</string>
-    <string name="preference_convert_keymap_type_1">JISキーボードを使用</string>
-    <string name="preference_convert_keymap_type_2">USキーボードを使用</string>
+    <string name="preference_convert_keymap_type_0">JISキー → JISマップ</string>
+    <string name="preference_convert_keymap_type_1">JISキー → USマップ</string>
+    <string name="preference_convert_keymap_type_2">USキー → USマップ</string>
+    <string name="preference_convert_keymap_type_3">変換しない（スルー）</string>
 
-	<string name="preference_cutpasteaction_byime_title">[Ctrl/Alt]+AXCVソフトキーで、常にカット＆ペーストする</string>
-	<string name="preference_cutpasteaction_byime_summary">OS/アプリ側でのサポートがなくても、ソフトキーボードによるカット＆ペースト機能を有効にします</string>
+	<string name="preference_cutpasteaction_byime_title">[Ctrl/Alt]+AXCVキーで、常にカット＆ペーストする</string>
+	<string name="preference_cutpasteaction_byime_summary">OS/アプリ側でのサポートがなくても、キーボードによるカット＆ペースト機能を有効にします</string>
     <string name="preference_cutpasteaction_byime_0">[Alt]=しない、[Ctrl]=しない</string>
     <string name="preference_cutpasteaction_byime_1">[Alt]=する、[Ctrl]=しない</string>
     <string name="preference_cutpasteaction_byime_2">[Alt]=しない、[Ctrl]=する</string>
@@ -442,14 +443,14 @@
         
   <!-- IME dependency -->
     <!-- OpenWnn English -->
-    <string name="nicownng_english_copyright">OpenWnn Ver.1.3.1/NicoWnn Ver.1.3.0/NicoWnnG Ver.2013.1231.1\nオムロン ソフトウェア(株)/hiroshica/GORRY</string>
+    <string name="nicownng_english_copyright">OpenWnn Ver.1.3.1/NicoWnn Ver.1.3.0/NicoWnnG Ver.2014.1204.1\nオムロン ソフトウェア(株)/hiroshica/GORRY</string>
     <string name="nicownng_english">nicoWnnG English</string>
     <string name="nicownng_english_system_dictionary">/data/data/net.gorry.android.input.nicownng/lib/libWnnEngDic.so</string>
     <string name="nicownng_english_writable_dictionary">/data/data/net.gorry.android.input.nicownng/writableEN.dic</string>
     <string name="en_word_separators">.,;:!?</string>
 
     <!-- OpenWnn Japanese -->
-    <string name="nicownng_japanese_copyright">OpenWnn Ver.1.3.1/NicoWnn Ver.1.3.0/NicoWnnG Ver.2013.1231.1\nオムロン ソフトウェア(株)/hiroshica/GORRY</string>
+    <string name="nicownng_japanese_copyright">OpenWnn Ver.1.3.1/NicoWnn Ver.1.3.0/NicoWnnG Ver.2014.1204.1\nオムロン ソフトウェア(株)/hiroshica/GORRY</string>
     <string name="nicownng_japanese">nicoWnnG IME</string>
     <string name="openwnn_japanese_system_dictionary">/data/data/net.gorry.android.input.nicownng/lib/libWnnJpnDic.so</string>
     <string name="nicownng_japanese_writable_dictionary">/data/data/net.gorry.android.input.nicownng/writableJAJP.dic</string>
